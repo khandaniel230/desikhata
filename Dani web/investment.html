@@ -1,0 +1,464 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Investment Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Project your investment growth with our free investment calculator. See how your money can grow with different contribution amounts and interest rates.">  
+<link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1>Investment Calculator</h1>  
+
+            <p>Calculate the future value of your investments</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <div class="input-group">  
+
+                    <label for="initial-investment">Initial Investment</label>  
+
+                    <input type="number" id="initial-investment" placeholder="e.g. 10000">  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="monthly-contribution">Monthly Contribution</label>  
+
+                    <input type="number" id="monthly-contribution" placeholder="e.g. 500">  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="investment-years">Investment Period (years)</label>  
+
+                    <input type="number" id="investment-years" placeholder="e.g. 10">  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="expected-return">Expected Return (%)</label>  
+
+                    <input type="number" id="expected-return" placeholder="e.g. 7" step="0.01">  
+
+                </div>  
+
+                  
+
+                <button class="calculate-btn" id="calculate-investment">Calculate</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Future Value:</p>  
+
+                        <p class="result-value" id="future-value">$0.00</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Total Contributions:</p>  
+
+                        <p class="result-value" id="total-contributions">$0.00</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Total Interest:</p>  
+
+                        <p class="result-value" id="total-interest">$0.00</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+              
+
+           <div class="units-section">  
+    <h2>About Investment Calculations</h2>  
+    <p>An investment calculator helps you project the potential growth of your investments over time. It demonstrates how factors like initial investment, regular contributions, interest rate, and time can significantly impact your investment returns through the power of compound interest.</p>  
+    
+    <h3>How to Use This Investment Calculator</h3>                 
+    <ol>                     
+        <li>Enter your initial investment amount</li>            
+        <li>Input your expected annual interest rate (return rate)</li>    
+        <li>Set the investment time period in years</li>
+        <li>Add any regular additional contributions (monthly or annually)</li>                   
+        <li>Select the compound frequency (monthly, quarterly, annually)</li>                   
+        <li>Click the calculate button</li>                   
+        <li>Review your investment growth projection, total contributions, and interest earned</li>
+        <li>Examine the year-by-year breakdown to see how your investment grows over time</li>                 
+    </ol>                         
+
+    <h3>Why We Use an Investment Calculator</h3>                 
+    <ul>                   
+        <li>Financial planning: Visualize how your investments can grow over time</li>                    
+        <li>Goal setting: Determine how much you need to invest to reach financial targets</li>                   
+        <li>Comparison analysis: Evaluate different investment scenarios and strategies</li>
+        <li>Compound interest understanding: See how compounding accelerates wealth building</li>
+        <li>Retirement planning: Project whether your current investment strategy will meet future needs</li>                               
+    </ul>               
+
+    <h3>Key Investment Terms Explained</h3>  
+    <table>  
+        <tr>  
+            <th>Term</th>  
+            <th>Definition</th>  
+            <th>Why It Matters</th>  
+        </tr>  
+        <tr>  
+            <td>Principal</td>  
+            <td>The initial amount of money invested</td>  
+            <td>Forms the foundation upon which compound interest builds</td>  
+        </tr>  
+        <tr>  
+            <td>Compound Interest</td>  
+            <td>Interest calculated on both initial principal and accumulated interest</td>  
+            <td>Allows investments to grow exponentially over time</td>  
+        </tr>  
+        <tr>  
+            <td>Annual Return Rate</td>  
+            <td>The percentage increase in investment value each year</td>  
+            <td>Determines how quickly your investment will grow</td>  
+        </tr>  
+        <tr>  
+            <td>Time Horizon</td>  
+            <td>The length of time you plan to keep money invested</td>  
+            <td>The most powerful factor in compound growth - longer periods yield significantly greater returns</td>  
+        </tr>  
+        <tr>  
+            <td>Regular Contributions</td>  
+            <td>Additional money added to the investment periodically</td>  
+            <td>Accelerates growth through dollar-cost averaging and increased compounding</td>  
+        </tr>  
+    </table>  
+    
+    <h3>How Different Factors Affect Investment Growth</h3>  
+    <p>Understanding these relationships can help you make better investment decisions:</p>
+    <ul>  
+        <li><strong>Higher interest rates</strong> exponentially increase final investment value</li>  
+        <li><strong>Longer time periods</strong> dramatically magnify the power of compounding</li>  
+        <li><strong>Regular contributions</strong> significantly boost the end result, even with small amounts</li>  
+        <li><strong>More frequent compounding</strong> periods yield slightly better returns</li>  
+        <li><strong>Starting earlier</strong> is often more impactful than investing larger amounts later</li>  
+    </ul>  
+    
+    <h3>Types of Investments</h3>  
+    <p>Different investment vehicles offer varying risk and return profiles:</p>
+    <ul>
+        <li><strong>Stocks:</strong> Higher potential returns but with higher volatility</li>
+        <li><strong>Bonds:</strong> Generally lower returns but more stable than stocks</li>
+        <li><strong>Mutual Funds:</strong> Professionally managed portfolios of stocks and/or bonds</li>
+        <li><strong>ETFs:</strong> Exchange-Traded Funds that track market indexes</li>
+        <li><strong>Real Estate:</strong> Property investments that can provide both income and appreciation</li>
+        <li><strong>Savings Accounts/CDs:</strong> Low-risk, low-return options for capital preservation</li>
+    </ul>
+    
+    <h3>The Mathematics Behind Investment Growth</h3>  
+    <p>Our calculator uses the compound interest formula to project investment growth:</p>
+    <p><strong>Future Value = P × (1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) - 1) / (r/n)]</strong></p>  
+    <p>Where:</p>
+    <ul>
+        <li><strong>P</strong> = Principal investment amount</li>
+        <li><strong>r</strong> = Annual interest rate (decimal)</li>
+        <li><strong>n</strong> = Number of compounding periods per year</li>
+        <li><strong>t</strong> = Number of years</li>
+        <li><strong>PMT</strong> = Regular additional contribution</li>
+    </ul>
+    <p>This formula calculates how your investment grows with both initial principal and regular contributions through compound interest.</p>
+    
+    <h3>Investment Strategies & Tips</h3>
+    <ul>
+        <li><strong>Start early:</strong> Time is the most powerful factor in investing</li>
+        <li><strong>Invest consistently:</strong> Regular contributions harness dollar-cost averaging</li>
+        <li><strong>Diversify:</strong> Spread investments across different asset classes to manage risk</li>
+        <li><strong>Think long-term:</strong> Market fluctuations smooth out over extended periods</li>
+        <li><strong>Reinvest dividends:</strong> Compounding works best when all earnings are reinvested</li>
+        <li><strong>Review periodically:</strong> Adjust your strategy as your goals and circumstances change</li>
+    </ul>
+    
+    <div class="fact-card">  
+        <i class="fas fa-lightbulb"></i>  
+        <p>If you invest $200 per month starting at age 25 with an average 7% annual return, you could accumulate over $500,000 by age 65. Wait until 35 to start, and you'd need to invest about $450 per month to reach the same goal!</p>  
+    </div>  
+</div>
+
+    </main>
+    
+<section class="rating-section">
+    <div class="container">
+        <h2>Rate This Calculator</h2>
+        <p>Your feedback helps us improve our tools. How would you rate your experience with this calculator?</p>
+        
+        <div class="rating-stars">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 stars">★</label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">★</label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">★</label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">★</label>
+            
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">★</label>
+        </div>
+        
+        <div class="feedback-form" id="feedbackForm">
+            <textarea placeholder="Optional: Share your feedback or suggestions..." rows="3"></textarea>
+            <button type="button" class="submit-feedback-btn">Submit Rating</button>
+        </div>
+        
+        <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+ <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p >
+                    </div> 
+
+            </div>  
+
+            <div class="faq-item" >
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+  
+
+<footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+               <div class="footer-section">  
+
+                    <h4 class="footer-heading">Calculator Types</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>  
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>  
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>  
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>  
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h4 class="footer-heading">Support & Legal</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>  
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>  
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/investment.js"></script>  
+
+</body>  
+
+</html>
+
+

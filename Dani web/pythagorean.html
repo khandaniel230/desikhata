@@ -1,0 +1,342 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Pythagorean Theorem Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Calculate the missing side of a right triangle using the Pythagorean theorem. Find hypotenuse or leg lengths easily.">  
+
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1><i class="fas fa-triangle"></i> Pythagorean Theorem Calculator</h1>  
+
+            <p>Find the missing side of a right triangle</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <div class="input-group">  
+
+                    <label>Find:</label>  
+
+                    <div class="radio-group">  
+
+                        <label>  
+
+                            <input type="radio" name="find-side" value="hypotenuse" checked> Hypotenuse (c)  
+
+                        </label>  
+
+                        <label>  
+
+                            <input type="radio" name="find-side" value="leg"> Leg (a or b)  
+
+                        </label>  
+
+                    </div>  
+
+                </div>  
+
+                  
+
+                <div class="input-group" id="leg-a-group">  
+
+                    <label for="leg-a">Leg A</label>  
+
+                    <input type="number" id="leg-a" placeholder="Enter length" step="any" min="0">  
+
+                </div>  
+
+                  
+
+                <div class="input-group" id="leg-b-group">  
+
+                    <label for="leg-b">Leg B</label>  
+
+                    <input type="number" id="leg-b" placeholder="Enter length" step="any" min="0">  
+
+                </div>  
+
+                  
+
+                <div class="input-group" id="hypotenuse-group" style="display: none;">  
+
+                    <label for="hypotenuse">Hypotenuse (C)</label>  
+
+                    <input type="number" id="hypotenuse" placeholder="Enter length" step="any" min="0">  
+
+                </div>  
+
+                  
+
+                <button class="calculate-btn" id="calculate-pythagorean">Calculate</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Missing Side:</p>  
+
+                        <p class="result-value" id="missing-side">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Calculation:</p>  
+
+                        <p class="result-value" id="calculation">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Triangle Type:</p>  
+
+                        <p class="result-value" id="triangle-type">-</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+              
+
+            <div class="units-section">  
+
+                <h2>Pythagorean Theorem</h2>  
+
+                <p>The Pythagorean theorem states that in a right triangle, the square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides.</p>  
+
+                  
+
+                
+                <h3>How to Use This Tool</h3>                 <ol>                     <li>Enter the required values in the input fields</li>                     <li>Select any necessary options or units from the dropdown menus</li>                     <li>Click the calculate button</li>                     <li>View your results in the result section</li>                 </ol>                                  <h3>Why We Use This Tool</h3>                 <ul>                     <li>Accuracy: Get precise calculations without manual computation errors</li>                     <li>Efficiency: Save time by quickly performing complex calculations</li>                     <li>Learning: Understand the formulas and concepts behind the calculations</li>                     <li>Decision-making: Use reliable data to make informed choices</li>                 </ul>                 <h3>Formula</h3>  
+
+                <p class="formula">aÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + bÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² = cÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²</p>  
+
+                <p>Where:</p>  
+
+                <ul>  
+
+                    <li>a and b are the lengths of the legs</li>  
+
+                    <li>c is the length of the hypotenuse</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Applications</h3>  
+
+                <p>The Pythagorean theorem is used in:</p>  
+
+                <ul>  
+
+                    <li>Construction and architecture</li>  
+
+                    <li>Navigation and GPS systems</li>  
+
+                    <li>Computer graphics and game development</li>  
+
+                    <li>Surveying and land measurement</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Special Right Triangles</h3>  
+
+                <div class="example-card">  
+
+                    <p><strong>3-4-5 Triangle:</strong> A triangle with sides 3, 4, and 5 units</p>  
+
+                    <p>3ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + 4ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² = 9 + 16 = 25 = 5ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²</p>  
+
+                </div>  
+
+                <div class="example-card">  
+
+                    <p><strong>5-12-13 Triangle:</strong> Another common Pythagorean triple</p>  
+
+                    <p>5ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + 12ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² = 25 + 144 = 169 = 13ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²</p>  
+
+                </div>  
+
+                  
+
+                <div class="triangle-visual">  
+
+                    <h3>Right Triangle Diagram</h3>  
+
+                    <div class="triangle-diagram">  
+
+                        <div class="triangle-shape"></div>  
+
+                        <div class="triangle-labels">  
+
+                            <span class="label-a">a</span>  
+
+                            <span class="label-b">b</span>  
+
+                            <span class="label-c">c</span>  
+
+                            <span class="right-angle">90ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°</span>  
+
+                        </div>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </main>  
+
+<footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Math Tools</h3>  
+
+                    <ul>  
+
+                        <li><a href="area.html">Area Calculator</a></li>  
+
+                        <li><a href="volume.html">Volume Calculator</a></li>  
+
+                        <li><a href="quadratic.html">Quadratic Solver</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Contact</h3>  
+
+                    <p>info@calcmaster.com</p>  
+
+                    <div class="social-icons">  
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>  
+
+                        <a href="#"><i class="fab fa-twitter"></i></a>  
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/pythagorean.js"></script>  
+
+</body>  
+
+</html> 

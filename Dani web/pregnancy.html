@@ -1,0 +1,420 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Pregnancy Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Track pregnancy milestones and calculate your due date">  
+
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+<link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+    <!-- Navigation (same as other calculator pages) -->  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1><i class="fas fa-baby"></i> Pregnancy Calculator</h1>  
+
+            <p>Track pregnancy milestones and calculate your due date</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <form id="pregnancy-form">  
+
+                    <div class="input-group">  
+
+                        <label for="last-period">First day of last menstrual period</label>  
+
+                        <input type="date" id="last-period" required>  
+
+                    </div>  
+
+                      
+
+                    <div class="input-group">  
+
+                        <label for="cycle-length">Average cycle length (days)</label>  
+
+                        <input type="number" id="cycle-length" value="28" min="21" max="35" required>  
+
+                    </div>  
+
+                      
+
+                    <button type="submit" class="calculate-btn">Calculate Pregnancy Info</button>  
+
+                </form>  
+
+                  
+
+                <div class="result-container" id="pregnancy-result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Estimated Due Date:</p>  
+
+                        <p class="result-value" id="due-date">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Current Week of Pregnancy:</p>  
+
+                        <p class="result-value" id="current-week">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Trimester:</p>  
+
+                        <p class="result-value" id="trimester">-</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+              
+
+            <div class="units-section">  
+
+                <h2>About Pregnancy Calculation</h2>  
+
+                <p>Pregnancy is typically calculated from the first day of your last menstrual period (LMP), which is about two weeks before conception actually occurs. A full-term pregnancy is approximately 40 weeks from the LMP.</p>  
+
+                  
+
+                
+                <h3>How to Use Pregnancy Calculator</h3>                 <ol>      
+                                   <li>Enter the last period date</li>                
+                                 <li>Enter your average cycle days length</li>                
+                         <li>Click the calculate button</li>              
+                               
+                         <li>View your results in the result section</li>        
+                                     </ol>                              
+                                    <h3>Why We Use Pregnancy Calculator</h3>         
+                                            <ul>                     <li>To Establish the Estimated Due Date (EDD)</li>                     
+                                                <li> To Track Fetal Development and Growth</li>             
+                                                        <li>To Schedule Critical Prenatal Tests and Screenings</li>                 
+                                                            <li>For Improved Prenatal Care and Planning</li>               
+                                                          </ul>          
+                                                                   <h3>Pregnancy Trimesters</h3>  
+
+                <ul>  
+
+                    <li><strong>First trimester:</strong> Weeks 1-13 - Early development, organ formation</li>  
+
+                    <li><strong>Second trimester:</strong> Weeks 14-27 - Growth, movement felt</li>  
+
+                    <li><strong>Third trimester:</strong> Weeks 28-40+ - Rapid growth, preparation for birth</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Key Pregnancy Milestones</h3>  
+
+                <table>  
+
+                    <tr>  
+
+                        <th>Week</th>  
+
+                        <th>Development Milestone</th>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>4</td>  
+
+                        <td>Neural tube begins forming</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>8</td>  
+
+                        <td>All essential organs beginning to form</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>12</td>  
+
+                        <td>Risk of miscarriage decreases significantly</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>16</td>  
+
+                        <td>Can possibly determine sex</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>20</td>  
+
+                        <td>Anatomy scan typically performed</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>24</td>  
+
+                        <td>Viable outside womb with medical intervention</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>28</td>  
+
+                        <td>Third trimester begins</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>37</td>  
+
+                        <td>Considered full-term</td>  
+
+                    </tr>  
+
+                </table>  
+
+                  
+
+                <div class="fact-card">  
+
+                    <i class="fas fa-lightbulb"></i>  
+
+                    <p>Only about 5% of babies are born on their exact due date. Most are born within two weeks before or after.</p>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </main>  
+
+       <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How often are the calculators updated?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We regularly review and update our calculators to ensure they use the most current formulas, rates, and standards. Financial calculators are updated with the latest rates monthly.</p>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+<script src="js/main.js"></script>
+    <script src="js/health-calculators.js"></script>  
+
+    <script>  
+
+        // Additional script for pregnancy calculator  
+
+        document.getElementById('pregnancy-form').addEventListener('submit', function(e) {  
+
+            e.preventDefault();  
+
+              
+
+            const lastPeriod = new Date(document.getElementById('last-period').value);  
+
+            const today = new Date();  
+
+            const diffTime = Math.abs(today - lastPeriod);  
+
+            const diffWeeks = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 7));  
+
+              
+
+            // Determine trimester  
+
+            let trimester;  
+
+            if (diffWeeks < 14) {  
+
+                trimester = "First trimester";  
+
+            } else if (diffWeeks < 28) {  
+
+                trimester = "Second trimester";  
+
+            } else {  
+
+                trimester = "Third trimester";  
+
+            }  
+
+              
+
+            document.getElementById('trimester').textContent = trimester;  
+
+        });  
+
+    </script>  
+
+</body>  
+
+</html>
+
+

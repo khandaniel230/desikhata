@@ -1,0 +1,513 @@
+<!DOCTYPE html>   
+
+<html lang="en">   
+
+<head>   
+
+    <meta charset="UTF-8">   
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Calorie Calculator | CalcMaster</title>   
+
+    <meta name="description" content="Calculate your daily calorie needs based on age, weight, height, activity level, and goals. Plan your nutrition effectively!">   
+
+    <link rel="stylesheet" href="css/style.css">   
+<link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="css/calculator.css">   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+
+</head><body><nav class="navbar">   
+
+    <div class="container">   
+
+        <a href="index.html" class="logo">CalcMaster</a>   
+
+        <div class="nav-links">   
+
+            <a href="index.html">Home</a>   
+
+            <a href="index.html#categories">Categories</a>   
+
+            <a href="about.html">About</a>   
+
+            <div class="search-container">   
+
+                <input type="text" placeholder="Search calculators..." id="search-input">   
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>   
+
+            </div>   
+
+        </div>   
+
+        <div class="hamburger">   
+
+            <span></span>   
+
+            <span></span>   
+
+            <span></span>   
+
+        </div>   
+
+    </div>   
+
+</nav>   
+
+<main class="calculator-container">   
+
+        <div class="calculator-header">   
+
+            <h1><i class="fas fa-utensils"></i> Calorie Calculator</h1>   
+
+            <p>Calculate your daily calorie needs for weight maintenance, loss, or gain</p>   
+
+        </div>   
+
+           
+
+        <div class="calculator-content">   
+
+            <div class="calculator-form">   
+
+                <div class="input-group">   
+
+                    <label for="age">Age</label>   
+
+                    <input type="number" id="age" placeholder="e.g. 30" min="15" max="80">   
+
+                </div>   
+
+                   
+
+                <div class="input-group">   
+
+                    <label for="gender">Gender</label>   
+
+                    <select id="gender">   
+
+                        <option value="male">Male</option>   
+
+                        <option value="female">Female</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <div class="input-group">   
+
+                    <label for="height">Height</label>   
+
+                    <input type="number" id="height" placeholder="e.g. 170">   
+
+                    <select id="height-unit">   
+
+                        <option value="cm">cm</option>   
+
+                        <option value="ft">feet</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <div class="input-group">   
+
+                    <label for="weight">Weight</label>   
+
+                    <input type="number" id="weight" placeholder="e.g. 68">   
+
+                    <select id="weight-unit">   
+
+                        <option value="kg">kg</option>   
+
+                        <option value="lbs">lbs</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <div class="input-group">   
+
+                    <label for="activity">Activity Level</label>   
+
+                    <select id="activity">   
+
+                        <option value="sedentary">Sedentary (little or no exercise)</option>   
+
+                        <option value="light">Light (exercise 1-3 days/week)</option>   
+
+                        <option value="moderate" selected>Moderate (exercise 3-5 days/week)</option>   
+
+                        <option value="active">Active (exercise 6-7 days/week)</option>   
+
+                        <option value="very-active">Very Active (hard exercise daily)</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <div class="input-group">   
+
+                    <label for="goal">Goal</label>   
+
+                    <select id="goal">   
+
+                        <option value="maintain" selected>Maintain Weight</option>   
+
+                        <option value="lose">Lose Weight</option>   
+
+                        <option value="gain">Gain Weight</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <button class="calculate-btn" id="calculate-calories">Calculate</button>   
+
+                   
+
+                <div class="result-container" id="result-container">   
+
+                    <div class="result-item">   
+
+                        <p class="result-label">Basal Metabolic Rate (BMR):</p>   
+
+                        <p class="result-value" id="bmr">0 calories</p>   
+
+                    </div>   
+
+                    <div class="result-item">   
+
+                        <p class="result-label">Daily Calorie Needs:</p>   
+
+                        <p class="result-value" id="calories">0 calories</p>   
+
+                    </div>   
+
+                    <div class="result-item">   
+
+                        <p class="result-label">Macronutrient Split:</p>   
+
+                        <p class="result-macros" id="macros">Protein: 0g, Carbs: 0g, Fat: 0g</p>   
+
+                    </div>   
+
+                    <div class="result-item">   
+
+                        <p class="result-label">Recommendation:</p>   
+
+                        <p class="result-tips" id="calorie-tips">Start with balanced meals and regular exercise!</p>   
+
+                    </div>   
+
+                </div>   
+
+            </div>   
+
+               
+
+           <div class="units-section">  
+    <h2>About Daily Calorie Needs</h2>  
+    <p>Your daily calorie needs represent the number of calories your body requires to maintain its current weight based on your age, gender, height, weight, and activity level. Understanding this number is the foundation of effective weight management.</p>  
+    
+    <h3>How to Use This Calorie Calculator</h3>                 
+    <ol>                     
+        <li>Enter your age in years</li>            
+        <li>Select your gender</li>    
+        <li>Enter your height and select your preferred unit (cm or feet)</li>
+        <li>Enter your weight and select your preferred unit (kg or lbs)</li>                   
+        <li>Select your typical activity level</li>                   
+        <li>Choose your weight goal (maintain, lose, or gain weight)</li>
+        <li>Click the calculate button</li>
+        <li>View your results including BMR, daily calorie needs, and macronutrient breakdown</li>                 
+    </ol>                         
+
+    <h3>Why We Use Calorie Calculator</h3>                 
+    <ul>                   
+        <li>Weight management: Determine the right calorie intake for your specific goals</li>                    
+        <li>Nutrition planning: Create effective meal plans based on your energy needs</li>                   
+        <li>Fitness goals: Align your nutrition with your exercise routine</li>
+        <li>Health awareness: Understand your body's energy requirements</li>
+        <li>Progress tracking: Monitor changes in your metabolic needs over time</li>                               
+    </ul>               
+
+    <h3>Understanding Your Results</h3>  
+    <table>  
+        <tr>  
+            <th>Term</th>  
+            <th>Definition</th>  
+            <th>Importance</th>  
+        </tr>  
+        <tr>  
+            <td>BMR (Basal Metabolic Rate)</td>  
+            <td>Calories your body needs at complete rest</td>  
+            <td>Represents 60-75% of total calorie expenditure</td>  
+        </tr>  
+        <tr>  
+            <td>TDEE (Total Daily Energy Expenditure)</td>  
+            <td>Total calories burned including activity</td>  
+            <td>Your maintenance calorie level</td>  
+        </tr>  
+        <tr>  
+            <td>Calorie Deficit</td>  
+            <td>Eating fewer calories than your TDEE</td>  
+            <td>Required for weight loss (typically 500 calories less daily)</td>  
+        </tr>  
+        <tr>  
+            <td>Calorie Surplus</td>  
+            <td>Eating more calories than your TDEE</td>  
+            <td>Required for weight gain (typically 500 calories more daily)</td>  
+        </tr>  
+        <tr>  
+            <td>Macronutrients</td>  
+            <td>Protein, carbohydrates, and fats</td>  
+            <td>Essential nutrients that provide energy and support bodily functions</td>  
+        </tr>  
+    </table>  
+    
+    <h3>Activity Level Definitions</h3>  
+    <p>Selecting the right activity level is crucial for accurate calculations:</p>
+    <ul>  
+        <li><strong>Sedentary:</strong> Little or no exercise, desk job</li>  
+        <li><strong>Lightly active:</strong> Light exercise 1-3 days per week</li>  
+        <li><strong>Moderately active:</strong> Moderate exercise 3-5 days per week</li>  
+        <li><strong>Very active:</strong> Hard exercise 6-7 days per week</li>  
+        <li><strong>Extremely active:</strong> Very hard exercise, physical job, or training twice daily</li>  
+    </ul>  
+    
+    <h3>Healthy Weight Management Guidelines</h3>  
+    <p>For sustainable results, follow these evidence-based recommendations:</p>
+    <ul>
+        <li>Aim for gradual weight change of 0.5-1kg (1-2lbs) per week</li>
+        <li>Focus on nutrient-dense foods rather than just counting calories</li>
+        <li>Combine dietary changes with regular physical activity</li>
+        <li>Prioritize protein intake to preserve muscle mass during weight loss</li>
+        <li>Stay hydrated as water supports metabolism and helps control appetite</li>
+    </ul>
+    
+    <h3>The Science Behind Our Calculations</h3>  
+    <p>Our calculator uses the Mifflin-St Jeor equation, considered the most accurate formula for estimating BMR:</p>
+    <p><strong>For men:</strong> BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) + 5</p>  
+    <p><strong>For women:</strong> BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) - 161</p>  
+    <p>We then multiply your BMR by an activity factor to determine your Total Daily Energy Expenditure (TDEE).</p>
+    
+    <div class="fact-card">  
+        <i class="fas fa-lightbulb"></i>  
+        <p>Your brain uses approximately 20% of your daily calorie intake despite being only about 2% of your body weight. This makes it the most energy-consuming organ in your body!</p>  
+    </div>  
+</div>     
+
+    </main> 
+    <!-- Add this section before the FAQ section in your calculator pages -->
+<section class="rating-section">
+    <div class="container">
+        <h2>Rate This Calculator</h2>
+        <p>Your feedback helps us improve our tools. How would you rate your experience with this calculator?</p>
+        
+        <div class="rating-stars">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 stars">★</label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">★</label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">★</label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">★</label>
+            
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">★</label>
+        </div>
+        
+        <div class="feedback-form" id="feedbackForm">
+            <textarea placeholder="Optional: Share your feedback or suggestions..." rows="3"></textarea>
+            <button type="button" class="submit-feedback-btn">Submit Rating</button>
+        </div>
+        
+        <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</section>
+
+<style>
+
+</style>
+ <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p >
+                    </div> 
+
+            </div>  
+
+            <div class="faq-item" >
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+<script>
+
+</script> 
+<script src="js/main.js"></script> 
+
+<footer>   
+
+        <div class="container">   
+
+            <div class="footer-content">   
+
+                <div class="footer-section">   
+
+                    <h3>CalcMaster</h3>   
+
+                    <p>Your comprehensive calculator solution for all needs.</p>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Quick Links</h3>   
+
+                    <ul>   
+
+                        <li><a href="index.html">Home</a></li>   
+
+                        <li><a href="index.html#categories">Categories</a></li>   
+
+                        <li><a href="about.html">About</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Health Tools</h3>   
+
+                    <ul>   
+
+                        <li><a href="bmi.html">BMI Calculator</a></li>   
+
+                        <li><a href="weight.html">Weight Calculator</a></li>   
+
+                        <li><a href="water.html">Water Intake</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Contact</h3>   
+
+                    <p>calcmasterinfo@gmail.com</p>   
+
+                    <div class="social-icons">   
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>   
+
+                        <a href="#"><i class="fab fa-twitter"></i></a>   
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>   
+
+                    </div>   
+
+                </div>   
+
+            </div>   
+
+            <div class="footer-bottom">   
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>   
+
+            </div>   
+
+        </div>   
+
+    </footer>   
+
+
+    <script src="js/calculators/calorie.js"></script>   
+
+</body>   
+
+</html>
+
+

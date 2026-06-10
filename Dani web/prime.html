@@ -1,0 +1,416 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Prime Number Checker | CalcMaster</title>  
+
+    <meta name="description" content="Check if a number is prime, find prime factors, and generate prime numbers within a range. Learn about prime numbers and their properties.">  
+<link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1><i class="fas fa-infinity"></i> Prime Number Checker</h1>  
+
+            <p>Check if a number is prime and find its prime factors</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <div class="input-group">  
+
+                    <label for="number-input">Enter a Number</label>  
+
+                    <input type="number" id="number-input" placeholder="e.g. 17" min="2" required>  
+
+                </div>  
+
+                  
+
+                <button class="calculate-btn" id="check-prime">Check Prime</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Prime Status:</p>  
+
+                        <p class="result-value" id="prime-status">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Prime Factors:</p>  
+
+                        <p class="result-value" id="prime-factors">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Divisibility:</p>  
+
+                        <p class="result-value" id="divisibility">-</p>  
+
+                    </div>  
+
+                </div>  
+
+                  
+
+                <div class="range-section">  
+
+                    <h3>Find Primes in Range</h3>  
+
+                    <div class="input-group">  
+
+                        <label for="range-start">From</label>  
+
+                        <input type="number" id="range-start" placeholder="Start" min="2" value="1">  
+
+                    </div>  
+
+                    <div class="input-group">  
+
+                        <label for="range-end">To</label>  
+
+                        <input type="number" id="range-end" placeholder="End" min="2" value="100">  
+
+                    </div>  
+
+                    <button class="calculate-btn" id="find-primes">Find Primes</button>  
+
+                      
+
+                    <div class="result-container" id="primes-list-container">  
+
+                        <p class="result-label">Prime Numbers:</p>  
+
+                        <p class="result-value" id="primes-list">-</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+              
+
+            <div class="units-section">  
+
+                <h2>About Prime Numbers</h2>  
+
+                <p>A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Prime numbers are the building blocks of all natural numbers.</p>  
+
+                  
+
+                
+                <h3>How to Use This Tool</h3>                 <ol>                     <li>Enter the required values in the input fields</li>                     <li>Select any necessary options or units from the dropdown menus</li>                     <li>Click the calculate button</li>                     <li>View your results in the result section</li>                 </ol>                                  <h3>Why We Use This Tool</h3>                 <ul>                     <li>Accuracy: Get precise calculations without manual computation errors</li>                     <li>Efficiency: Save time by quickly performing complex calculations</li>                     <li>Learning: Understand the formulas and concepts behind the calculations</li>                     <li>Decision-making: Use reliable data to make informed choices</li>                 </ul>                 <h3>Properties of Prime Numbers</h3>  
+
+                <ul>  
+
+                    <li>There are infinitely many prime numbers</li>  
+
+                    <li>All prime numbers (except 2) are odd</li>  
+
+                    <li>Every number greater than 1 is either prime or can be factored into primes</li>  
+
+                    <li>The number 2 is the only even prime number</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Prime Number Theorem</h3>  
+
+                <p>The prime number theorem describes the asymptotic distribution of prime numbers. It states that the number of primes less than n is approximately n/ln(n).</p>  
+
+                  
+
+                <h3>Famous Prime Numbers</h3>  
+
+                <div class="example-card">  
+
+                    <p><strong>Largest known prime:</strong> The largest known prime number is 2⁸²⁵⁸⁹⁹³³ - 1
+
+(24,862,048 digits)</p>  
+
+                </div>  
+
+                <div class="example-card">  
+
+
+                </div>  
+
+                <div class="example-card">  
+
+                    <p><strong>Twin primes:</strong> Prime pairs that differ by 2 (e.g., 3 and 5, 11 and 13)</p>  
+
+                </div>  
+
+                  
+
+                <h3>Applications of Prime Numbers</h3>  
+
+                <ul>  
+
+                    <li><strong>Cryptography:</strong> RSA encryption relies on the difficulty of factoring large numbers</li>  
+
+                    <li><strong>Computer science:</strong> Hash tables use primes for better distribution</li>  
+
+                    <li><strong>Mathematics:</strong> Fundamental theorem of arithmetic</li>  
+
+                </ul>  
+
+                  
+
+                <div class="prime-facts">  
+
+                    <h3>Interesting Facts</h3>  
+
+                    <div class="fact-card">  
+
+                        <i class="fas fa-lightbulb"></i>  
+
+                        <p>Prime numbers become less frequent as numbers get larger</p>  
+
+                    </div>  
+
+                    <div class="fact-card">  
+
+                        <i class="fas fa-lightbulb"></i>  
+
+                        <p>The largest known prime has over 24 million digits</p>  
+
+                    </div>  
+
+                    <div class="fact-card">  
+
+                        <i class="fas fa-lightbulb"></i>  
+
+                        <p>There is no known pattern to the distribution of primes</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </main>     <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p >
+                    </div> 
+
+            </div>  
+
+            <div class="faq-item" >
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+
+<footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Math Tools</h3>  
+
+                    <ul>  
+
+                        <li><a href="factorail.html">Factorial Calculator</a></li>  
+
+                        <li><a href="base-converter.html">Base Converter</a></li>  
+
+                        <li><a href="quadratic.html">Quadratic Solver</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Contact</h3>  
+
+                    <p>info@calcmaster.com</p>  
+
+                    <div class="social-icons">  
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>  
+
+                        <a href="#"><i class="fab fa-twitter"></i></a>  
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/prime.js"></script>  
+
+</body>  
+
+</html> 

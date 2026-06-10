@@ -1,0 +1,385 @@
+<!DOCTYPE html>   
+
+<html lang="en">   
+
+<head>   
+
+    <meta charset="UTF-8">   
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Factorial Calculator | CalcMaster</title>   
+
+    <meta name="description" content="Calculate factorials of numbers. Learn about factorial notation, permutations, combinations, and their applications in mathematics and statistics.">   
+
+    <link rel="stylesheet" href="css/style.css">   
+
+    <link rel="stylesheet" href="css/calculator.css">   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+
+</head>\n<body>\n<nav class="navbar">   
+
+    <div class="container">   
+
+        <a href="index.html" class="logo">CalcMaster</a>   
+
+        <div class="nav-links">   
+
+            <a href="index.html">Home</a>   
+
+            <a href="index.html#categories">Categories</a>   
+
+            <a href="about.html">About</a>   
+
+            <div class="search-container">   
+
+                <input type="text" placeholder="Search calculators..." id="search-input">   
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>   
+
+            </div>   
+
+        </div>   
+
+        <div class="hamburger">   
+
+            <span></span>   
+
+            <span></span>   
+
+            <span></span>   
+
+        </div>   
+
+    </div>   
+
+</nav>   
+
+<main class="calculator-container">   
+
+        <div class="calculator-header">   
+
+            <h1><i class="fas fa-exclamation"></i> Factorial Calculator</h1>   
+
+            <p>Calculate n! (n factorial) for any non-negative integer</p>   
+
+        </div>   
+
+           
+
+        <div class="calculator-content">   
+
+            <div class="calculator-form">   
+
+                <div class="input-group">   
+
+                    <label for="number-input">Enter a Non-negative Integer</label>   
+
+                    <input type="number" id="number-input" placeholder="e.g. 5" min="0" max="170" required>   
+
+                    <small>Note: Maximum value is 170 due to JavaScript number limitations</small>   
+
+                </div>   
+
+                   
+
+                <button class="calculate-btn" id="calculate-factorial">Calculate Factorial</button>   
+
+                   
+
+                <div class="result-container" id="result-container">   
+
+                    <div class="result-item">   
+
+                        <p class="result-label">Factorial Result:</p>   
+
+                        <p class="result-value" id="factorial-result">-</p>   
+
+                    </div>   
+
+                    <div class="result-item">   
+
+                        <p class="result-label">Calculation:</p>   
+
+                        <p class="result-value" id="factorial-calculation">-</p>   
+
+                    </div>   
+
+                    <div class="result-item">   
+
+                        <p class="result-label">Scientific Notation:</p>   
+
+                        <p class="result-value" id="scientific-notation">-</p>   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <div class="related-calculations">   
+
+                    <h3>Related Calculations</h3>   
+
+                    <div class="input-group">   
+
+                        <label for="n-value">n (Set Size)</label>   
+
+                        <input type="number" id="n-value" placeholder="e.g. 5" min="0">   
+
+                    </div>   
+
+                    <div class="input-group">   
+
+                        <label for="r-value">r (Selection Size)</label>   
+
+                        <input type="number" id="r-value" placeholder="e.g. 3" min="0">   
+
+                    </div>   
+
+                       
+
+                    <button class="calculate-btn" id="calculate-permutation">Permutations (nPr)</button>   
+
+                    <button class="calculate-btn" id="calculate-combination">Combinations (nCr)</button>   
+
+                       
+
+                    <div class="result-container" id="permutation-result">   
+
+                        <p class="result-label">Permutations (nPr):</p>   
+
+                        <p class="result-value" id="permutation-value">-</p>   
+
+                    </div>   
+
+                    <div class="result-container" id="combination-result">   
+
+                        <p class="result-label">Combinations (nCr):</p>   
+
+                        <p class="result-value" id="combination-value">-</p>   
+
+                    </div>   
+
+                \n   
+
+                <h2>About Factorials</h2>   
+
+                <p>The factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n.</p>   
+
+                   
+
+                <h3>How to Use This Tool</h3>   
+
+                <ol>   
+
+                    <li>Enter a non-negative integer in the input field (maximum value is 170)</li>   
+
+                    <li>Click the "Calculate Factorial" button to see the result</li>   
+
+                    <li>For permutations and combinations, enter values for n (set size) and r (selection size)</li>   
+
+                    <li>Click either the "Permutations (nPr)" or "Combinations (nCr)" button to calculate</li>   
+
+                </ol>   
+
+                   
+
+                <h3>Why We Use This Tool</h3>   
+
+                <ul>   
+
+                    <li>Mathematical calculations: Quickly compute factorials without manual multiplication</li>   
+
+                    <li>Educational purposes: Understand the growth rate of factorial sequences</li>   
+
+                    <li>Probability calculations: Calculate permutations and combinations for statistical problems</li>   
+
+                    <li>Research and analysis: Support work in combinatorics, statistics, and algorithm analysis</li>   
+
+                </ul>   
+
+                   
+
+                <h3>Factorial Definition</h3>   
+
+                <p class="formula">n! = n ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (n-1) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (n-2) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ... ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 3 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 1</p>   
+
+                <p>By definition, 0! = 1</p>   
+
+                   
+
+                <h3>Examples</h3>   
+
+                <div class="example-card">   
+
+                    <p><strong>5! = 5 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 4 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 3 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 1 = 120</strong></p>   
+
+                </div>   
+
+                <div class="example-card">   
+
+                    <p><strong>7! = 7 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 6 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 5 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 4 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 3 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 1 = 5,040</strong></p>   
+
+                </div>   
+
+                <div class="example-card">   
+
+                    <p><strong>10! = 10 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 9 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 8 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â ... ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 1 = 3,628,800</strong></p>   
+
+                </div>   
+
+                   
+
+                <h3>Applications of Factorials</h3>   
+
+                <ul>   
+
+                    <li><strong>Combinatorics:</strong> Counting arrangements and selections</li>   
+
+                    <li><strong>Probability:</strong> Calculating probabilities of events</li>   
+
+                    <li><strong>Statistics:</strong> Permutations and combinations</li>   
+
+                    <li><strong>Calculus:</strong> Taylor series expansions</li>   
+
+                    <li><strong>Computer Science:</strong> Algorithm analysis</li>   
+
+                </ul>   
+
+                   
+
+                <h3>Permutations and Combinations</h3>   
+
+                <p><strong>Permutations (nPr):</strong> Number of ways to arrange r objects from n distinct objects</p>   
+
+                <p class="formula">nPr = n! / (n - r)!</p>   
+
+                   
+
+                <p><strong>Combinations (nCr):</strong> Number of ways to choose r objects from n distinct objects</p>   
+
+                <p class="formula">nCr = n! / [r! ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (n - r)!]</p>   
+
+                   
+
+                <div class="example-card">   
+
+                    <p><strong>Example:</strong> How many ways to arrange 3 books from 5?</p>   
+
+                    <p>5P3 = 5! / (5-3)! = 120 / 2 = 60 arrangements</p>   
+
+                </div>   
+
+                <div class="example-card">   
+
+                    <p><strong>Example:</strong> How many ways to choose 3 books from 5?</p>   
+
+                    <p>5C3 = 5! / [3! ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (5-3)!] = 120 / (6 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 2) = 10 selections</p>   
+
+                </div>   
+
+                   
+
+                <h3>Stirling's Approximation</h3>   
+
+                <p>For large values of n, factorials can be approximated using Stirling's formula:</p>   
+
+                <p class="formula">n! ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°Ãƒâ€¹Ã¢â‚¬Â  ÃƒÆ’Ã‚Â¢Ãƒâ€¹Ã¢â‚¬Â Ãƒâ€¦Ã‚Â¡(2ÃƒÆ’Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬n) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (n/e)ÃƒÆ’Ã‚Â¢Ãƒâ€šÃ‚ÂÃƒâ€šÃ‚Â¿</p>   
+
+                <p>This approximation becomes more accurate as n increases.</p>   
+
+            </div>   
+
+        </div>   
+
+    </main>   
+
+<footer>   
+
+        <div class="container">   
+
+            <div class="footer-content">   
+
+                <div class="footer-section">   
+
+                    <h3>CalcMaster</h3>   
+
+                    <p>Your comprehensive calculator solution for all needs.</p>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Quick Links</h3>   
+
+                    <ul>   
+
+                        <li><a href="index.html">Home</a></li>   
+
+                        <li><a href="index.html#categories">Categories</a></li>   
+
+                        <li><a href="about.html">About</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Math Tools</h3>   
+
+                    <ul>   
+
+                        <li><a href="prime.html">Prime Checker</a></li>   
+
+                        <li><a href="base-converter.html">Base Converter</a></li>   
+
+                        <li><a href="pythagorean.html">Pythagorean Theorem</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Contact</h3>   
+
+                    <p>info@calcmaster.com</p>   
+
+                    <div class="social-icons">   
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>   
+
+                        <a href="#"><i class="fab fa-twitter"></i></a>   
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>   
+
+                    </div>   
+
+                </div>   
+
+            </div>   
+
+            <div class="footer-bottom">   
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>   
+
+            </div>   
+
+        </div>   
+
+    </footer>   
+
+<script src="js/main.js"></script>   
+
+    <script src="js/calculators/factorial.js"></script>   
+
+</body>   
+
+</html>
+
+

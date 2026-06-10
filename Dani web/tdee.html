@@ -1,0 +1,531 @@
+<!DOCTYPE html>  
+
+
+<html lang="en">  
+
+
+<head>  
+
+
+    <meta charset="UTF-8">  
+
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+
+    <title>TDEE Calculator | CalcMaster</title>  
+
+<link rel="stylesheet" href="css/additional-style.css">
+    <meta name="description" content="Calculate your Total Daily Energy Expenditure based on your BMR and activity level">  
+
+
+    <link rel="stylesheet" href="css/style.css">  
+
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+<title>Free Tdee calculator</title>
+
+</head>
+<body>
+
+<nav class="navbar">  
+
+
+    <div class="container">  
+
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+
+        <div class="nav-links">  
+
+
+            <a href="index.html">Home</a>  
+
+
+            <a href="index.html#categories">Categories</a>  
+
+
+            <a href="about.html">About</a>  
+
+
+            <div class="search-container">  
+
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+
+            </div>  
+
+
+        </div>  
+
+
+        <div class="hamburger">  
+
+
+            <span></span>  
+
+
+            <span></span>  
+
+
+            <span></span>  
+
+
+        </div>  
+
+
+    </div>  
+
+
+</nav>  
+
+
+    <!-- Navigation (same as other calculator pages) -->  
+
+
+<main class="calculator-container">  
+
+
+        <div class="calculator-header">  
+
+
+            <h1><i class="fas fa-running"></i> TDEE Calculator</h1>  
+
+
+            <p>Calculate your Total Daily Energy Expenditure</p>  
+
+
+        </div>  
+
+
+          
+
+
+        <div class="calculator-content">  
+
+
+            <div class="calculator-form">  
+
+
+                <form id="tdee-form">  
+
+
+                    <div class="input-group">  
+
+
+                        <label for="bmr">Your BMR (calories/day)</label>  
+
+
+                        <input type="number" id="bmr" min="800" max="3000" required>  
+
+
+                        <small>Use our <a href="bmr.html">BMR Calculator</a> if you don't know your BMR</small>  
+
+
+                    </div>  
+
+
+                      
+
+
+                    <div class="input-group">  
+
+
+                        <label for="activity-level">Activity Level</label>  
+
+
+                        <select id="activity-level" required>  
+
+
+                            <option value="1.2">Sedentary (little or no exercise)</option>  
+
+
+                            <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>  
+
+
+                            <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>  
+
+
+                            <option value="1.725">Very active (hard exercise 6-7 days/week)</option>  
+
+
+                            <option value="1.9">Extremely active (very hard exercise, physical job)</option>  
+
+
+                        </select>  
+
+
+                    </div>  
+
+
+                      
+
+
+                    <button type="submit" class="calculate-btn">Calculate TDEE</button>  
+
+
+                </form>  
+
+
+                  
+
+
+                <div class="result-container" id="tdee-result-container">  
+
+
+                    <div class="result-item">  
+
+
+                        <p class="result-label">Total Daily Energy Expenditure:</p>  
+
+
+                        <p class="result-value" id="tdee-result">-</p>  
+
+
+                    </div>  
+
+
+                </div>  
+
+
+            </div>  
+
+
+              
+
+
+            <div class="units-section">  
+
+
+                <h2>About Total Daily Energy Expenditure (TDEE)</h2>  
+
+
+                <p>Your TDEE represents the total number of calories you burn each day, including your BMR and all physical activity. This is the number of calories you need to maintain your current weight.</p>  
+
+
+                  
+
+
+                
+
+                 <h3>How to Use This Tool</h3>
+
+                 <ol>
+
+                     <li>Enter the required values in the input fields</li>
+
+                     <li>Select any necessary options or units from the dropdown menus</li>
+
+                     <li>Click the calculate button</li>
+
+                     <li>View your results in the result section</li>
+
+                 </ol>
+
+                 
+
+                 <h3>Why We Use This Tool</h3>
+
+                 <ul>
+
+                     <li>We use it as a strategic starting point for managing our weight and health.</li>
+
+                     <li> For Weight Gain or Muscle Building</li>
+
+                     <li> For Weight Maintenance</li>
+
+                     <li>For Informed Diet and Fitness Planning</li>
+
+                 </ul>
+
+                 <h3>Activity Level Multipliers</h3>  
+
+
+                <ul>  
+
+
+                    <li><strong>Sedentary (1.2):</strong> Little or no exercise, desk job</li>  
+
+
+                    <li><strong>Lightly active (1.375):</strong> Light exercise 1-3 days/week</li>  
+
+
+                    <li><strong>Moderately active (1.55):</strong> Moderate exercise 3-5 days/week</li>  
+
+
+                    <li><strong>Very active (1.725):</strong> Hard exercise 6-7 days/week</li>  
+
+
+                    <li><strong>Extremely active (1.9):</strong> Very hard exercise, physical job, or training twice daily</li>  
+
+
+                </ul>  
+
+
+                  
+
+
+                <h3>Using TDEE for Weight Goals</h3>  
+
+
+                <ul>  
+
+
+                    <li><strong>Weight maintenance:</strong> Eat calories equal to your TDEE</li>  
+
+
+                    <li><strong>Weight loss:</strong> Eat 300-500 calories less than your TDEE</li>  
+
+
+                    <li><strong>Weight gain:</strong> Eat 300-500 calories more than your TDEE</li>  
+
+
+                </ul>  
+
+
+            </div>  
+
+
+        </div>  
+
+
+    </main>
+      <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How often are the calculators updated?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We regularly review and update our calculators to ensure they use the most current formulas, rates, and standards. Financial calculators are updated with the latest rates monthly.</p>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </div>  
+  
+
+
+       <footer>  
+
+
+        <div class="container">  
+
+
+            <div class="footer-content">  
+
+
+                <div class="footer-section">  
+
+
+                    <h3>CalcMaster</h3>  
+
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+
+                </div>  
+
+
+                <div class="footer-section">  
+
+
+                    <h3>Quick Links</h3>  
+
+
+                    <ul>  
+
+
+                        <li><a href="index.html">Home</a></li>  
+
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+
+                        <li><a href="about.html">About</a></li>  
+
+
+                    </ul>  
+
+
+                </div>  
+
+
+               <div class="footer-section">  
+
+
+                    <h4 class="footer-heading">Calculator Types</h4>  
+
+
+                    <ul class="footer-links">  
+
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>  
+
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>  
+
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>  
+
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>  
+
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>  
+
+
+                    </ul>  
+
+
+                </div>  
+
+
+                <div class="footer-section">  
+
+
+                    <h4 class="footer-heading">Support & Legal</h4>  
+
+
+                    <ul class="footer-links">  
+
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>  
+
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>  
+
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>  
+
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>  
+
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>  
+
+
+                    </ul>  
+
+
+                </div>  
+
+
+            </div>  
+
+
+            <div class="footer-bottom">  
+
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+
+            </div>  
+
+
+        </div>  
+
+
+    </footer>  
+
+<script src="js/main.js"></script>
+    <script src="js/health-calculators.js"></script>  
+
+
+</body>  
+
+
+</html>  

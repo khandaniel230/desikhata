@@ -1,0 +1,311 @@
+/* Finance Header */ 
+
+.finance-header { 
+
+    background: linear-gradient(135deg, #3b82f6, #1e40af); 
+
+    color: white; 
+
+    padding: 4rem 0; 
+
+    text-align: center; 
+
+}  .finance-header h1 { 
+
+    font-size: 2.5rem; 
+
+    margin-bottom: 1rem; 
+
+}  .finance-header h1 i { 
+
+    margin-right: 1rem; 
+
+}  .finance-header p { 
+
+    font-size: 1.2rem; 
+
+    opacity: 0.9; 
+
+}  /* Finance Tools Grid */ 
+
+.finance-tools { 
+
+    padding: 4rem 0; 
+
+}  .finance-grid { 
+
+    display: grid; 
+
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+
+    gap: 2rem; 
+
+    margin-top: 2rem; 
+
+}  /* Finance-specific Calculator Card Styling */ 
+
+.calculator-card { 
+
+    /* Inherits core styles from style.css */ 
+
+    border-top: 4px solid #3b82f6; 
+
+    padding: 2rem; 
+
+}  /* Only keep finance-specific overrides */ 
+
+.calculator-card .card-icon { 
+
+    font-size: 2rem; 
+
+    color: #3b82f6; 
+
+    margin-bottom: 1.5rem; 
+
+}  .calculator-card h3 { 
+
+    color: #1e40af; 
+
+    margin-bottom: 1rem; 
+
+}  .calculator-card p { 
+
+    color: #6b7280; 
+
+    margin-bottom: 1.5rem; 
+
+}  .card-badge { 
+
+    display: inline-block; 
+
+    padding: 0.25rem 0.75rem; 
+
+    background: #dbeafe; 
+
+    color: #1e40af; 
+
+    border-radius: 50px; 
+
+    font-size: 0.8rem; 
+
+    font-weight: 500; 
+
+}  /* Responsive Adjustments */ 
+
+@media (max-width: 768px) { 
+
+    .finance-grid { 
+
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+
+    } 
+
+     
+
+    .finance-header h1 { 
+
+        font-size: 2rem; 
+
+    } 
+
+}  @media (max-width: 480px) { 
+
+    .finance-grid { 
+
+        grid-template-columns: 1fr; 
+
+    } 
+
+     
+
+    .calculator-card { 
+
+        padding: 1.5rem; 
+
+    } 
+
+}  /* Duplicate finance-header section completely removed */  .finance-header h1 { 
+
+    font-size: 2.5rem; 
+
+    margin-bottom: 1rem; 
+
+}  .finance-header h1 i { 
+
+    margin-right: 1rem; 
+
+}  .finance-header p { 
+
+    font-size: 1.2rem; 
+
+    opacity: 0.9; 
+
+    max-width: 700px; 
+
+    margin: 0 auto; 
+
+}  /* Finance Tools Section */ 
+
+.finance-tools { 
+
+    padding: 4rem 0; 
+
+}  .section-header { 
+
+    text-align: center; 
+
+    margin-bottom: 2rem; 
+
+}  .section-header h2 { 
+
+    font-size: 2rem; 
+
+    margin-bottom: 0.5rem; 
+
+    color: var(--dark-color); 
+
+}  .section-header p { 
+
+    color: #666; 
+
+}  /* Finance Grid */ 
+
+.finance-grid { 
+
+    display: grid; 
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+
+    gap: 1.5rem; 
+
+}  /* Calculator Card */ 
+
+.calculator-card { 
+
+    background: white; 
+
+    border-radius: 12px; 
+
+    padding: 1.5rem; 
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+
+    transition: all 0.3s ease; 
+
+    text-align: center; 
+
+    border-left: 4px solid var(--primary-color); 
+
+    height: 100%; 
+
+    display: flex; 
+
+    flex-direction: column; 
+
+    align-items: center; 
+
+}  .calculator-card:hover { 
+
+    transform: translateY(-5px); 
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+
+}  .calculator-card .card-icon { 
+
+    width: 60px; 
+
+    height: 60px; 
+
+    border-radius: 12px; 
+
+    display: flex; 
+
+    align-items: center; 
+
+    justify-content: center; 
+
+    font-size: 1.5rem; 
+
+    color: white; 
+
+    margin-bottom: 1.25rem; 
+
+}  .calculator-card h3 { 
+
+    margin: 0 0 0.5rem 0; 
+
+    font-size: 1.1rem; 
+
+    color: var(--dark-color); 
+
+    font-weight: 600; 
+
+}  .calculator-card p { 
+
+    margin: 0 0 1.5rem 0; 
+
+    color: #6b7280; 
+
+    font-size: 0.9rem; 
+
+    line-height: 1.5; 
+
+}  .card-badge { 
+
+    display: inline-block; 
+
+    padding: 0.25rem 0.75rem; 
+
+    background: #e5e7eb; 
+
+    color: #4b5563; 
+
+    border-radius: 50px; 
+
+    font-size: 0.75rem; 
+
+    font-weight: 500; 
+
+    margin-top: auto; 
+
+}  .bg-blue { 
+
+    background-color: var(--primary-color); 
+
+}  /* Responsive Adjustments */ 
+
+@media (max-width: 768px) { 
+
+    .finance-header { 
+
+        padding: 4rem 0; 
+
+        margin-top: 60px; 
+
+    } 
+
+     
+
+    .finance-grid { 
+
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+
+    } 
+
+}  @media (max-width: 480px) { 
+
+    .finance-header h1 { 
+
+        font-size: 2rem; 
+
+    } 
+
+     
+
+    .finance-grid { 
+
+        grid-template-columns: 1fr; 
+
+    } 
+
+} 

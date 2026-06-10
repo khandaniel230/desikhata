@@ -1,0 +1,390 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Ideal Weight Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Calculate your healthy weight range based on height and gender">  
+
+    <link rel="stylesheet" href="css/style.css">  
+<link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+    
+
+<!-- Navigation (same as other calculator pages) -->  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header"> 
+             <h1><i class="fas fa-balance-scale">
+
+             </i> Ideal Weight Calculator</h1>  
+
+            <p>Calculate your healthy weight range based on height and gender</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <form id="idealweight-form">  
+
+                    <div class="input-group">  
+
+                        <label for="gender">Gender</label>  
+
+                        <select id="gender" required>  
+
+                            <option value="male">Male</option>  
+
+                            <option value="female">Female</option>  
+
+                        </select>  
+
+                    </div>  
+
+                      
+
+                    <div class="input-group">  
+
+                        <label for="height">Height (cm)</label>  
+
+                        <input type="number" id="height" min="100" max="250" required>  
+
+                    </div>  
+
+                      
+
+                    <button type="submit" class="calculate-btn">Calculate Ideal Weight</button>  
+
+                </form>  
+
+                  
+
+                <div class="result-container" id="idealweight-result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Ideal Weight Range:</p>  
+
+                        <p class="result-value" id="idealweight-result">-</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+              
+
+            <div class="units-section">  
+
+                <h2>About Ideal Weight</h2>  
+
+                <p>Ideal weight is a range that is considered healthy for your height. It's based on statistical data and provides a general guideline, but individual factors like muscle mass, body composition, and frame size should also be considered.</p>  
+
+                  
+
+                
+                <h3>How to Use TDEE Calculator</h3>                
+                 <ol>                    
+                                       
+                     <li>Select your gender</li>        
+                    <li>Enter your height</li>               
+                    <li>View your results in the result section</li>        
+                                             </ol>                                 
+                                              <h3>Why We Use TDEE  Calculator</h3>             
+                                             <ul>         
+                            <li>Accuracy: Get precise calculations without manual computation errors</li>        
+                  <li>Efficiency: Save time by quickly performing complex calculations</li>  
+                                     <li>Learning: Understand the formulas and concepts behind the calculations</li>                    
+                                      <li>Decision-making: Use reliable data to make informed choices</li>           
+                                          </ul>                 <h3>Limitations of Ideal Weight Calculations</h3>  
+
+
+
+
+                <ul>  
+
+                    <li>Doesn't account for muscle mass vs. fat mass</li>  
+
+                    <li>Doesn't consider body frame size (small, medium, large)</li>  
+
+                    <li>Doesn't reflect body fat distribution</li>  
+
+                    <li>May not be appropriate for athletes with high muscle mass</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Other Health Indicators</h3>  
+
+                <p>While ideal weight provides a general guideline, these metrics may give a more complete picture of health:</p>  
+
+                <ul>  
+
+                    <li><strong>Body Mass Index (BMI):</strong> Weight-to-height ratio</li>  
+
+                    <li><strong>Waist-to-Height Ratio:</strong> Abdominal fat indicator</li>  
+
+                    <li><strong>Body Fat Percentage:</strong> Direct measurement of body composition</li>  
+
+                    <li><strong>Waist Circumference:</strong> Indicator of abdominal obesity</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Healthy Weight Maintenance Tips</h3>  
+
+                <ul>  
+
+                    <li>Focus on nutrient-dense foods rather than calorie counting alone</li>  
+
+                    <li>Incorporate both cardio and strength training exercises</li>  
+
+                    <li>Prioritize sleep and stress management</li>  
+
+                    <li>Aim for gradual weight changes (0.5-1 kg per week)</li>  
+
+                </ul>  
+
+            </div>  
+
+        </div>  
+
+    </main>  
+
+ <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How often are the calculators updated?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We regularly review and update our calculators to ensure they use the most current formulas, rates, and standards. Financial calculators are updated with the latest rates monthly.</p>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </div>  
+
+</section>  
+
+
+     <footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Math Tools</h3>  
+
+                    <ul>  
+
+                        <li><a href="factorail.html">Factorial Calculator</a></li>  
+
+                        <li><a href="base-converter.html">Base Converter</a></li>  
+
+                        <li><a href="quadratic.html">Quadratic Solver</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Contact</h3>  
+
+                    <p>info@calcmaster.com</p>  
+
+                    <div class="social-icons">  
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>  
+
+                        <a href="#"><i class="fab fa-twitter"></i></a>  
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+<script src="js/main.js"></script>
+<script src="js/health-calculators.js"></script>  
+
+</body>  
+
+</html>
+
+

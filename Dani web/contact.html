@@ -1,0 +1,457 @@
+<!DOCTYPE html>   
+
+<html lang="en">   
+
+<head>   
+
+    <meta charset="UTF-8">   
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Contact Us | CalcMaster - We'd Love to Hear From You</title>   
+
+    <meta name="description" content="Get in touch with the CalcMaster team. We're here to help with calculator questions, suggestions, or just to say hello!">   
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+<style>
+    :root { 
+ --primary-color: #4361ee; 
+ --secondary-color: #3f37c9; 
+ --accent-color: #4895ef; 
+ --light-color: #f8f9fa; 
+ --dark-color: #212529; 
+ --success-color: #4cc9f0; 
+ --warning-color: #f72585; 
+ --border-radius: 8px; 
+ --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+ --transition: all 0.3s ease; 
+
+} 
+ * { 
+ margin: 0; 
+ padding: 0; 
+ box-sizing: border-box; 
+
+}  body { 
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+ line-height: 1.6; 
+ color: var(--dark-color); 
+ background-color: var(--light-color);   }  .container { 
+ width: 90%; 
+ max-width: 1200px; 
+ margin: 0 auto; 
+ padding: 0 20px; 
+
+}  a { 
+ text-decoration: none; 
+ color: inherit; 
+
+}  .btn { 
+ display: inline-block; 
+ padding: 10px 20px; 
+ background-color: var(--primary-color); 
+ color: white; 
+ border: none; 
+ border-radius: var(--border-radius); 
+ cursor: pointer; 
+ transition: var(--transition); 
+
+}  .btn:hover { 
+ background-color: var(--secondary-color); 
+ transform: translateY(-2px); 
+
+}  /* Navigation */ 
+/* Contact Hero */
+.contact-hero {
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+padding: 5rem 0 3rem;
+text-align: center;
+}
+
+.contact-hero h1 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+
+.contact-hero .subtitle {
+font-size: 1.2rem;
+opacity: 0.9;
+max-width: 600px;
+margin: 0 auto;
+}
+
+/* Contact Grid */
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+margin: 3rem auto;
+max-width: 1200px;
+}
+
+/* Contact Form */
+.contact-form {
+background: white;
+border-radius: var(--border-radius);
+padding: 2rem;
+box-shadow: var(--box-shadow);
+}
+
+.contact-form h2 {
+font-size: 1.8rem;
+margin-bottom: 0.5rem;
+color: var(--dark-color);
+}
+
+.contact-form p {
+color: #666;
+margin-bottom: 2rem;
+}
+
+.form-group {
+margin-bottom: 1.5rem;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: 500;
+color: var(--dark-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%;
+padding: 12px 15px;
+border: 1px solid #ddd;
+border-radius: var(--border-radius);
+font-size: 1rem;
+transition: var(--transition);
+}
+
+.form-group textarea {
+resize: vertical;
+min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+border-color: var(--primary-color);
+outline: none;
+box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.submit-btn {
+width: 100%;
+padding: 14px;
+background-color: var(--primary-color);
+color: white;
+border: none;
+border-radius: var(--border-radius);
+font-size: 1.1rem;
+cursor: pointer;
+transition: var(--transition);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.submit-btn:hover {
+background-color: var(--secondary-color);
+transform: translateY(-2px);
+}
+
+/* Contact Info */
+.contact-info {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.info-card {
+background: white;
+border-radius: var(--border-radius);
+padding: 1.5rem;
+box-shadow: var(--box-shadow);
+}
+
+.info-card h3 {
+font-size: 1.3rem;
+margin-bottom: 0.8rem;
+color: var(--dark-color);
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.info-card h3 i {
+color: var(--primary-color);
+}
+
+.info-card p {
+color: #666;
+line-height: 1.6;
+margin-bottom: 0.5rem;
+}
+
+.contact-link {
+color: var(--primary-color);
+text-decoration: none;
+font-weight: 500;
+}
+
+.contact-link:hover {
+text-decoration: underline;
+}
+
+.social-links {
+margin-top: 1rem;
+}
+
+.social-links h3 {
+font-size: 1.3rem;
+margin-bottom: 1rem;
+color: var(--dark-color);
+}
+
+.social-icons {
+display: flex;
+gap: 15px;
+}
+
+.social-icons a {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: #f0f0f0;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary-color);
+transition: var(--transition);
+}
+
+.social-icons a:hover {
+background: var(--primary-color);
+color: white;
+transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+.contact-grid {
+    grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 768px) {
+.contact-hero h1 {
+    font-size: 2rem;
+}
+
+.contact-form {
+    padding: 1.5rem;
+}
+}
+
+@media (max-width: 480px) {
+.contact-hero {
+    padding: 4rem 0 2rem;
+}
+
+.contact-hero h1 {
+    font-size: 1.8rem;
+}
+
+.submit-btn {
+    font-size: 1rem;
+}
+}
+
+
+
+</style>
+</head>
+<body>   
+
+    <!-- Navigation Bar -->   
+
+
+<!-- Contact Hero -->   
+
+    <section class="contact-hero">   
+
+        <div class="container">   
+
+            <h1>We're Here to Help you </h1>   
+
+            <p class="subtitle">Have a question,Feedback, or just want to say hello? We read every message.</p>   
+
+        </div>   
+
+    </section>   
+
+<!-- Contact Content -->   
+
+    <section class="contact-content">   
+
+        <div class="container">   
+
+            <div class="contact-grid">   
+
+                <div class="contact-form">   
+
+                    <h2>Send Us a Message</h2>   
+
+                    <p>We usually respond within 24 hours (usually much faster!)</p>   
+
+                       
+
+                    <form id="contactForm">   
+
+                        <div class="form-group">   
+
+                            <label for="name">Your Name</label>   
+
+                            <input type="text" id="name" placeholder="What should we call you?">   
+
+                        </div>   
+
+                           
+
+                        <div class="form-group">   
+
+                            <label for="email">Email Address</label>   
+
+                            <input type="email" id="email" placeholder="Where should we reply?">   
+
+                        </div>   
+
+                           
+
+                        <div class="form-group">   
+
+                            <label for="subject">Subject</label>   
+
+                            <select id="subject">   
+
+                                <option value="">What's your  topic?</option>   
+
+                                <option value="question">Calculator Question</option>   
+
+                                <option value="suggestion">Feature Suggestion</option>   
+
+                                <option value="bug">Report a Problem</option>   
+
+                                <option value="other">A Feedback</option>   
+
+                            </select>   
+
+                        </div>   
+
+                           
+
+                        <div class="form-group">   
+
+                            <label for="message">Your Message or Feedback</label>   
+
+                            <textarea id="message" rows="5" placeholder="Tell us what's on your mind..."></textarea>   
+
+                        </div>   
+
+                           
+
+                        <button type="submit" class="submit-btn">   
+
+                            <i class="fas fa-paper-plane"></i> Send Message   
+
+                        </button>   
+
+                    </form>   
+
+                </div>   
+
+                   
+
+                <div class="contact-info">   
+
+                    <div class="info-card">   
+
+                        <h3><i class="fas fa-envelope"></i> Email Us</h3>   
+
+                        <p>Prefer old-fashioned email?</p>   
+
+                        <a href="mailto:hello@calcmaster.com" class="contact-link">hello@calcmaster.com</a>   
+
+                    </div>   
+
+                       
+
+                    <div class="info-card">   
+
+                        <h3><i class="fas fa-comment-dots"></i> Quick Questions?</h3>   
+
+                        <p>Check our <a href="faq.html">FAQ page</a> - you can find an instant answer!</p>   
+
+                    </div>   
+
+                       
+
+                    <div class="info-card">   
+
+                        <h3><i class="fas fa-lightbulb"></i> Have an Idea?</h3>   
+
+                        <p>We love calculators suggestions! Tell us what tool you'd like to see next.how it should work.</p>   
+
+                    </div>   
+
+                       
+
+                    <div class="social-links">   
+
+                        <h3>Find Us Online</h3>   
+
+                        <div class="social-icons">   
+
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>   
+
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>   
+
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>   
+
+                        </div>   
+
+                    </div>   
+
+                </div>   
+
+            </div>   
+
+        </div>   
+
+    </section>   
+
+<!-- Footer -->   
+
+  
+
+<script src="js/main.js"></script>   
+
+</body>   
+
+</html>
+
+

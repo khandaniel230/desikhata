@@ -1,0 +1,325 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Quadratic Equation Solver | CalcMaster</title>  
+
+    <meta name="description" content="Solve quadratic equations of the form axÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + bx + c = 0. Get real and complex roots with step-by-step solutions.">  
+
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head>\n<body>\n<nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1><i class="fas fa-square-root-alt"></i> Quadratic Equation Solver</h1>  
+
+            <p>Solve equations of the form axÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + bx + c = 0</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <div class="input-group">  
+
+                    <label for="coefficient-a">Coefficient a</label>  
+
+                    <input type="number" id="coefficient-a" placeholder="e.g. 1" step="any" required>  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="coefficient-b">Coefficient b</label>  
+
+                    <input type="number" id="coefficient-b" placeholder="e.g. -3" step="any" required>  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="coefficient-c">Coefficient c</label>  
+
+                    <input type="number" id="coefficient-c" placeholder="e.g. 2" step="any" required>  
+
+                </div>  
+
+                  
+
+                <button class="calculate-btn" id="calculate-quadratic">Solve Equation</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Equation:</p>  
+
+                        <p class="result-value" id="equation-display">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Discriminant:</p>  
+
+                        <p class="result-value" id="discriminant">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Roots:</p>  
+
+                        <p class="result-value" id="roots">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Solution Steps:</p>  
+
+                        <p class="result-tips" id="solution-steps">Enter coefficients to see solution steps</p>  
+
+                    </div>  
+
+                \n  
+
+                <h2>About Quadratic Equations</h2>  
+
+                <p>A quadratic equation is any equation that can be written in the form axÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + bx + c = 0, where a, b, and c are constants and a ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°Ãƒâ€šÃ‚Â  0.</p>  
+
+                  
+
+                <h3>How to Use This Tool</h3>  
+
+                <ol>  
+
+                    <li>Enter the coefficient a (the coefficient of xÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â²)</li>  
+
+                    <li>Enter the coefficient b (the coefficient of x)</li>  
+
+                    <li>Enter the coefficient c (the constant term)</li>  
+
+                    <li>Click the "Solve Equation" button</li>  
+
+                    <li>View the equation, discriminant, roots, and step-by-step solution</li>  
+
+                </ol>  
+
+                  
+
+                <h3>Why We Use This Tool</h3>  
+
+                <ul>  
+
+                    <li>Educational aid: Understand the quadratic formula and solution process</li>  
+
+                    <li>Problem-solving: Quickly solve quadratic equations for homework or exams</li>  
+
+                    <li>Verification: Check your manual calculations for accuracy</li>  
+
+                    <li>Applications: Solve real-world problems in physics, engineering, and economics</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Quadratic Formula</h3>  
+
+                <p>The solutions to any quadratic equation can be found using the quadratic formula:</p>  
+
+                <p class="formula">x = [-b ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â± ÃƒÆ’Ã‚Â¢Ãƒâ€¹Ã¢â‚¬Â Ãƒâ€¦Ã‚Â¡(bÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² - 4ac)] / 2a</p>  
+
+                  
+
+                <h3>Discriminant</h3>  
+
+                <p>The discriminant (D = bÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² - 4ac) determines the nature of the roots:</p>  
+
+                <ul>  
+
+                    <li><strong>D > 0:</strong> Two distinct real roots</li>  
+
+                    <li><strong>D = 0:</strong> One real root (repeated)</li>  
+
+                    <li><strong>D < 0:</strong> Two complex roots</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Examples</h3>  
+
+                <div class="example-card">  
+
+                    <p><strong>Example 1:</strong> xÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² - 3x + 2 = 0</p>  
+
+                    <p>Solutions: x = 1, x = 2</p>  
+
+                </div>  
+
+                <div class="example-card">  
+
+                    <p><strong>Example 2:</strong> xÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + 4x + 4 = 0</p>  
+
+                    <p>Solution: x = -2 (double root)</p>  
+
+                </div>  
+
+                <div class="example-card">  
+
+                    <p><strong>Example 3:</strong> xÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â² + x + 1 = 0</p>  
+
+                    <p>Solutions: Complex roots</p>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </main>  
+
+<footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Math Tools</h3>  
+
+                    <ul>  
+
+                        <li><a href="area.html">Area Calculator</a></li>  
+
+                        <li><a href="volume.html">Volume Calculator</a></li>  
+
+                        <li><a href="percentage.html">Percentage Calculator</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Contact</h3>  
+
+                    <p>info@calcmaster.com</p>  
+
+                    <div class="social-icons">  
+
+                        <a href="#"><i class="fab fa-facebook"></i></a>  
+
+                        <a href="#"><i class="fab fa-twitter"></i></a>  
+
+                        <a href="#"><i class="fab fa-instagram"></i></a>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/quadratic.js"></script>  
+
+</body>  
+
+</html> 

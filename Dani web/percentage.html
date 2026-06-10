@@ -1,0 +1,342 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Percentage Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Quickly calculate percentages with our free online calculator. Find percentage increases, decreases, and solve percentage problems easily.">  
+
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1>Percentage Calculator</h1>  
+
+            <p>Calculate percentages, increases, decreases, and differences</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <div class="input-group">  
+
+                    <label for="calculation-type">Calculation Type</label>  
+
+                    <select id="calculation-type">  
+
+                        <option value="find-percentage">What is X% of Y?</option>  
+
+                        <option value="find-percent">X is what percent of Y?</option>  
+
+                        <option value="increase">Increase Y by X%</option>  
+
+                        <option value="decrease">Decrease Y by X%</option>  
+
+                        <option value="difference">Percentage difference between X and Y</option>  
+
+                    </select>  
+
+                </div>  
+
+                  
+
+                <div id="dynamic-inputs">  
+
+                    <div class="input-group" id="x-value-group">  
+
+                        <label for="x-value" id="x-label">Percentage (X)</label>  
+
+                        <input type="number" id="x-value" placeholder="Enter X value">  
+
+                    </div>  
+
+                      
+
+                    <div class="input-group" id="y-value-group">  
+
+                        <label for="y-value" id="y-label">Base Value (Y)</label>  
+
+                        <input type="number" id="y-value" placeholder="Enter Y value">  
+
+                    </div>  
+
+                </div>  
+
+                  
+
+                <button class="calculate-btn" id="calculate-percentage">Calculate</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <p class="result-label" id="result-label">Result:</p>  
+
+                    <p class="result-value" id="percentage-result">0.00</p>  
+
+                </div>  
+
+            </div>  
+
+              
+
+            <div class="units-section">  
+
+                <h2>Percentage Calculations</h2>  
+
+                <p>A percentage is a number or ratio expressed as a fraction of 100.</p>  
+
+                  
+
+                
+                <h3>How to Use This Tool</h3>                 <ol>                     <li>Enter the required values in the input fields</li>                     <li>Select any necessary options or units from the dropdown menus</li>                     <li>Click the calculate button</li>                     <li>View your results in the result section</li>                 </ol>                                  <h3>Why We Use This Tool</h3>                 <ul>                     <li>Accuracy: Get precise calculations without manual computation errors</li>                     <li>Efficiency: Save time by quickly performing complex calculations</li>                     <li>Learning: Understand the formulas and concepts behind the calculations</li>                     <li>Decision-making: Use reliable data to make informed choices</li>                 </ul>                 <h3>Common Percentage Formulas</h3>  
+
+                <ul>  
+
+                    <li><strong>What is X% of Y?:</strong> (X/100) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Y</li>  
+
+                    <li><strong>X is what % of Y?:</strong> (X/Y) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 100</li>  
+
+                    <li><strong>Increase Y by X%:</strong> Y ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (1 + X/100)</li>  
+
+                    <li><strong>Decrease Y by X%:</strong> Y ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (1 - X/100)</li>  
+
+                    <li><strong>% difference between X and Y:</strong> (|X-Y|/((X+Y)/2)) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 100</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Practical Examples</h3>  
+
+                <table>  
+
+                    <tr>  
+
+                        <th>Calculation</th>  
+
+                        <th>Example</th>  
+
+                        <th>Result</th>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>What is 20% of 50?</td>  
+
+                        <td>(20/100) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 50</td>  
+
+                        <td>10</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>15 is what % of 50?</td>  
+
+                        <td>(15/50) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â 100</td>  
+
+                        <td>30%</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Increase 80 by 25%</td>  
+
+                        <td>80 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (1 + 25/100)</td>  
+
+                        <td>100</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Decrease 120 by 15%</td>  
+
+                        <td>120 ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â (1 - 15/100)</td>  
+
+                        <td>102</td>  
+
+                    </tr>  
+
+                </table>  
+
+                  
+
+                <h3>Common Percentage Uses</h3>  
+
+                <ul>  
+
+                    <li><strong>Finance:</strong> Interest rates, investment returns</li>  
+
+                    <li><strong>Retail:</strong> Discounts, sales tax, tips</li>  
+
+                    <li><strong>Statistics:</strong> Survey results, population changes</li>  
+
+                    <li><strong>Science:</strong> Concentration, error margins</li>  
+
+                    <li><strong>Everyday:</strong> Battery life, progress tracking</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Percentage Points vs. Percent</h3>  
+
+                <p>A percentage point is the arithmetic difference between two percentages. For example, moving from 10% to 12% is a 2 percentage point increase, but a 20% increase in the rate.</p>  
+
+            </div>  
+
+        </div>  
+
+    </main>  
+
+<footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+               <div class="footer-section">  
+
+                    <h4 class="footer-heading">Calculator Types</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>  
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>  
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>  
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>  
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h4 class="footer-heading">Support & Legal</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>  
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>  
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>  
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/percentage.js"></script>  
+
+</body>  
+
+</html>
+
+

@@ -1,0 +1,832 @@
+<!DOCTYPE html>   
+
+<html lang="en">   
+
+<head>   
+
+    <meta charset="UTF-8">   
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>FAQs | CalcMaster - Your Questions Answered</title>   
+
+    <meta name="description" content="Get answers to common questions about CalcMaster's calculators and services in our friendly FAQ section.">   
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+<style>
+    /* FAQ Hero */ 
+/* Global Styles */ 
+
+:root { 
+ --primary-color: #4361ee; 
+ --secondary-color: #3f37c9; 
+ --accent-color: #4895ef; 
+ --light-color: #f8f9fa; 
+ --dark-color: #212529; 
+ --success-color: #4cc9f0; 
+ --warning-color: #f72585; 
+ --border-radius: 8px; 
+ --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+ --transition: all 0.3s ease; 
+
+} 
+ * { 
+ margin: 0; 
+ padding: 0; 
+ box-sizing: border-box; 
+
+}  body { 
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+ line-height: 1.6; 
+ color: var(--dark-color); 
+ background-color: var(--light-color);   }  .container { 
+ width: 90%; 
+ max-width: 1200px; 
+ margin: 0 auto; 
+ padding: 0 20px; 
+
+}  a { 
+ text-decoration: none; 
+ color: inherit; 
+
+}  .btn { 
+ display: inline-block; 
+ padding: 10px 20px; 
+ background-color: var(--primary-color); 
+ color: white; 
+ border: none; 
+ border-radius: var(--border-radius); 
+ cursor: pointer; 
+ transition: var(--transition); 
+
+}  .btn:hover { 
+ background-color: var(--secondary-color); 
+ transform: translateY(-2px); 
+
+}  /* Navigation */ 
+
+.faq-hero { 
+
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
+
+    color: white; 
+
+    padding: 5rem 0 3rem; 
+
+    text-align: center; 
+
+}  .faq-hero h1 { 
+
+    font-size: 2.5rem; 
+
+    margin-bottom: 0.5rem; 
+
+}  .faq-hero .subtitle { 
+
+    font-size: 1.2rem; 
+
+    opacity: 0.9; 
+
+    margin-bottom: 2rem; 
+
+}  .search-faq { 
+
+    max-width: 600px; 
+
+    margin: 0 auto; 
+
+    display: flex; 
+
+}  .search-faq input { 
+
+    flex: 1; 
+
+    padding: 12px 15px; 
+
+    border: none; 
+
+    border-radius: var(--border-radius) 0 0 var(--border-radius); 
+
+    font-size: 1rem; 
+
+}  .search-faq button { 
+
+    padding: 12px 20px; 
+
+    background-color: var(--accent-color); 
+
+    color: white; 
+
+    border: none; 
+
+    border-radius: 0 var(--border-radius) var(--border-radius) 0; 
+
+    cursor: pointer; 
+
+    font-size: 1rem; 
+
+    transition: var(--transition); 
+
+}  .search-faq button:hover { 
+
+    background-color: var(--secondary-color); 
+
+}  /* FAQ Categories */ 
+
+.faq-categories { 
+
+    display: flex; 
+
+    gap: 10px; 
+
+    margin: 2rem 0; 
+
+    flex-wrap: wrap; 
+
+}  .category-btn { 
+
+    padding: 8px 16px; 
+
+    background-color: #f0f0f0; 
+
+    border: none; 
+
+    border-radius: 50px; 
+
+    cursor: pointer; 
+
+    transition: var(--transition); 
+
+}  .category-btn.active { 
+
+    background-color: var(--primary-color); 
+
+    color: white; 
+
+}  .category-btn:hover:not(.active) { 
+
+    background-color: #ddd; 
+
+}  /* FAQ Accordion */ 
+
+.faq-accordion { 
+
+    max-width: 800px; 
+
+    margin: 0 auto; 
+
+}  .faq-item { 
+
+    margin-bottom: 15px; 
+
+    border-radius: var(--border-radius); 
+
+    overflow: hidden; 
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+
+}  .faq-question { 
+
+    width: 100%; 
+
+    padding: 18px 20px; 
+
+    text-align: left; 
+
+    background: white; 
+
+    border: none; 
+
+    display: flex; 
+
+    justify-content: space-between; 
+
+    align-items: center; 
+
+    cursor: pointer; 
+
+    font-size: 1.1rem; 
+
+    font-weight: 500; 
+
+    transition: var(--transition); 
+
+}  .faq-question:hover { 
+
+    background: #f9f9f9; 
+
+}  .faq-question i { 
+
+    transition: transform 0.3s ease; 
+
+}  .faq-question.active i { 
+
+    transform: rotate(180deg); 
+
+}  .faq-answer { 
+
+    padding: 0 20px; 
+
+    background: white; 
+
+    max-height: 0; 
+
+    overflow: hidden; 
+
+    transition: max-height 0.3s ease, padding 0.3s ease; 
+
+}  .faq-answer.show { 
+
+    padding: 20px; 
+
+    max-height: 500px; 
+
+}  .faq-answer p, .faq-answer ul, .faq-answer ol { 
+
+    margin-bottom: 1rem; 
+
+    line-height: 1.6; 
+
+    color: #555; 
+
+}  .faq-answer a { 
+
+    color: var(--primary-color); 
+
+    text-decoration: none; 
+
+}  .faq-answer a:hover { 
+
+    text-decoration: underline; 
+
+}  /* FAQ CTA */ 
+
+.faq-cta { 
+
+    text-align: center; 
+
+    margin-top: 3rem; 
+
+    padding: 2rem; 
+
+    background: #f8f9fa; 
+
+    border-radius: var(--border-radius); 
+
+}  .faq-cta p { 
+
+    font-size: 1.2rem; 
+
+    margin-bottom: 1.5rem; 
+
+}  .cta-button { 
+
+    display: inline-block; 
+
+    padding: 12px 24px; 
+
+    background-color: var(--primary-color); 
+
+    color: white; 
+
+    border-radius: var(--border-radius); 
+
+    text-decoration: none; 
+
+    font-weight: 500; 
+
+    transition: var(--transition); 
+
+}  .cta-button:hover { 
+
+    background-color: var(--secondary-color); 
+
+    transform: translateY(-2px); 
+
+}  /* Responsive Adjustments */ 
+
+@media (max-width: 768px) { 
+
+    .faq-hero h1 { 
+
+        font-size: 2rem; 
+
+    } 
+
+     
+
+    .search-faq { 
+
+        flex-direction: column; 
+
+    } 
+
+     
+
+    .search-faq input { 
+
+        border-radius: var(--border-radius) var(--border-radius) 0 0; 
+
+    } 
+
+     
+
+    .search-faq button { 
+
+        border-radius: 0 0 var(--border-radius) var(--border-radius); 
+
+    } 
+
+}  @media (max-width: 480px) { 
+
+    .faq-hero { 
+
+        padding: 4rem 0 2rem; 
+
+    } 
+
+     
+
+    .faq-hero h1 { 
+
+        font-size: 1.8rem; 
+
+    } 
+
+     
+
+    .faq-question { 
+
+        font-size: 1rem; 
+
+        padding: 15px; 
+
+    } 
+
+} 
+
+/* FAQ Accordion */ 
+
+.faq-item { 
+
+    margin-bottom: 15px; 
+
+    border-radius: var(--border-radius); 
+
+    overflow: hidden; 
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+
+    transition: all 0.3s ease; 
+
+}  .faq-question { 
+
+    width: 100%; 
+
+    padding: 18px 20px; 
+
+    text-align: left; 
+
+    background: white; 
+
+    border: none; 
+
+    display: flex; 
+
+    justify-content: space-between; 
+
+    align-items: center; 
+
+    cursor: pointer; 
+
+    font-size: 1.1rem; 
+
+    font-weight: 500; 
+
+}  .faq-question:hover { 
+
+    background: #f9f9f9; 
+
+}  .faq-question i { 
+
+    transition: transform 0.3s ease; 
+
+}  .faq-question:active i { 
+
+    transform: rotate(180deg); 
+
+}  .faq-answer{      padding: 0 20px; 
+
+    background: white; 
+
+    max-height: 0; 
+
+    overflow: hidden; 
+
+    transition: max-height 0.3s ease, padding 0.3s ease; 
+
+}  .faq-question:hover ~ .faq-answer { 
+
+    padding: 20px; 
+
+    max-height: 1000px; /* Adjust based on your longest answer */ 
+
+}  .faq-answer p,  
+
+.faq-answer ul,  
+
+.faq-answer ol { 
+
+    margin-bottom: 1rem; 
+
+    line-height: 1.6; 
+
+    color: #555; 
+
+} 
+</style>
+</head>
+<body>   
+
+    <!-- Navigation Bar -->   
+
+    
+
+<!-- FAQ Hero -->   
+
+    <section class="faq-hero">   
+
+        <div class="container">   
+
+            <h1>Frequently asked Questions</h1>   
+
+            <p class="subtitle">(And some are not-so-frequent ones too)</p>   
+
+            <div class="search-faq">   
+
+                <input type="text" id="text" placeholder="What's your question?">   
+
+                <button id="send"> Send</button>   
+
+            </div>   
+
+        </div>   
+
+    </section>   
+
+<!-- FAQ Content -->   
+
+    <section class="faq-content">   
+
+        <div class="container">   
+
+            <div class="faq-categories">   
+
+                <button class="category-btn active" data-category="all">All Questions</button>   
+
+                <button class="category-btn" data-category="calculators">Using Calculators</button>   
+
+                <button class="category-btn" data-category="account">Account Help</button>   
+
+                <button class="category-btn" data-category="technical">Technical Stuff</button>   
+
+            </div>   
+
+               
+
+            <div class="faq-accordion">   
+
+                <!-- Calculator Questions -->   
+
+                <div class="faq-item" data-category="calculators">   
+
+                    <button class="faq-question">   
+
+                        <span>How accurate are your calculators?</span>   
+
+                        <i class="fas fa-chevron-down"></i>   
+
+                    </button>   
+
+                    <div class="faq-answer">   
+
+                        <p>We take accuracy up to 99% seriously! Our calculators use standard formulas and algorithms that are regularly reviewed by our team. That said, we always recommend:</p>   
+
+                        <ul>   
+
+                            <li>Double-check your inputs</li>   
+
+                            <li>Using our calculators as guides rather than absolute answer</li>   
+
+                            <li>Consult a professional for important financial or health decisions</li>   
+
+                        </ul>   
+
+                        <p>If you ever spot an error, please <a href="contact.html">let us know</a> - we'll buy you a virtual coffee!</p>   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <div class="faq-item" data-category="calculators">   
+
+                    <button class="faq-question">   
+
+                        <span>Why don't you have a calculator for [specific need]?</span>   
+
+                        <i class="fas fa-chevron-down"></i>   
+
+                    </button>   
+
+                    <div class="faq-answer">   
+
+                        <p>Great question! We're always adding new calculators based on what our users need. Here's how we decide what to build next:</p>   
+
+                        <ol>   
+
+                            <li><strong>Popular demand:</strong> If multiple people request something, it jumps to the top of our list</li>   
+
+                            <li><strong>Uniqueness:</strong> We focus on tools that aren't easily available elsewhere</li>   
+
+                            <li><strong>Usefulness:</strong> Will this help people in their daily lives?</li>   
+
+                        </ol>   
+
+                        <p><a href="contact.html">Send us your suggestion</a> - we'd love to hear what you need!</p>   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <!-- Account Questions -->   
+
+                <div class="faq-item" data-category="account">   
+
+                    <button class="faq-question">   
+
+                        <span>Do I need an account to use CalcMaster?</span>   
+
+                        <i class="fas fa-chevron-down"></i>   
+
+                    </button>   
+
+                    <div class="faq-answer">   
+
+                        <p>Nope! We believe in easy access to helpful tools, so you can use all our calculators without signing up. We don't even ask for your email (unless you want to contact us).</p>   
+
+                        <p>The only reason you'd want an account is if we ever add features like saving calculations - and even then, we'll keep the core tools completely free and open.</p>   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <!-- Technical Questions -->   
+
+                <div class="faq-item" data-category="technical">   
+
+                    <button class="faq-question">   
+
+                        <span>Why isn't the calculator working on my device?</span>   
+
+                        <i class="fas fa-chevron-down"></i>   
+
+                    </button>   
+
+                    <div class="faq-answer">   
+
+                        <p>Oh no! Sorry you're having trouble. Here are some quick fixes to try:</p>   
+
+                        <ul>   
+
+                            <li><strong>Refresh the page:</strong> Sometimes browsers get cranky</li>   
+
+                            <li><strong>Check your internet:</strong> Our calculators need a connection to load properly</li>   
+
+                            <li><strong>Update your browser:</strong> We work best with Chrome, Firefox, Safari, or Edge (updated versions)</li>   
+
+                        </ul>   
+
+                        <p>If you're still stuck, <a href="contact.html">contact us</a> and tell us:   
+
+                        <br>- What device you're using   
+
+                        <br>- What browser (including version if possible)   
+
+                        <br>- What exactly isn't working</p>   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <div class="faq-item" data-category="technical">   
+
+                    <button class="faq-question">   
+
+                        <span>Do you store my calculation data?</span>   
+
+                        <i class="fas fa-chevron-down"></i>   
+
+                    </button>   
+
+                    <div class="faq-answer">   
+
+                        <p>We respect your privacy. Here's the simple version:</p>   
+
+                        <ul>   
+
+                            <li><strong>No storage:</strong> Your calculations happen in your browser and disappear when you close the page</li>   
+
+                            <li><strong>No tracking:</strong> We don't record what specific calculations you perform</li>   
+
+                            <li><strong>Basic analytics:</strong> We only collect anonymous usage data (like how many people visit) to improve the site</li>   
+
+</ul>   
+
+                        <p>You can read the full details in our <a href="privacy-policy.html">Privacy Policy</a>, but we designed CalcMaster to be as private as possible.</p>   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <div class="faq-item" data-category="all">   
+
+                    <button class="faq-question">   
+
+                        <span>How do you support a free service?</span>   
+
+                        <i class="fas fa-chevron-down"></i>   
+
+                    </button>   
+
+                    <div class="faq-answer">   
+
+                        <p>We get this question a lot! Here's our philosophy:</p>   
+
+                        <ul>   
+
+                            <li><strong>No ads:</strong> We hate annoying pop-ups as much as you do</li>   
+
+                            <li><strong>No paywalls:</strong> All core calculators will always be free</li>   
+
+                            <li><strong>Passion project:</strong> Right now, we fund this through our day jobs because we believe in the mission</li>   
+
+                        </ul>   
+
+                        <p>If you'd like to support us, the best thing you can do is <strong>share CalcMaster</strong> with someone who might find it helpful!</p>   
+
+                    </div>   
+
+                </div>   
+
+            </div>   
+
+               
+
+            <div class="faq-cta">   
+
+                <p>Still have questions? We're happy to help!</p>   
+
+                <a href="contact.html" class="cta-button">Contact Our Team</a>   
+
+            </div>   
+
+        </div>   
+
+    </section>   
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+// FAQ Accordion Functionality
+
+const faqQuestions = document.querySelectorAll('.faq-question')
+
+
+    faqQuestions.forEach(question => {
+
+    question.addEventListener('click', () => {
+
+        // Toggle active class on question
+
+        question.classList.toggle('active')
+
+
+            // Get the answer element
+
+        const answer = question.nextElementSibling
+
+
+            // Toggle answer visibility
+
+        if (question.classList.contains('active')) {
+
+            answer.classList.add('show');
+
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+
+        } else {
+
+            answer.classList.remove('show');
+
+            answer.style.maxHeight = '0';
+
+        }
+
+
+
+        // Close other open FAQs if needed
+
+        // faqQuestions.forEach(item => {
+
+        //     if (item !== question) {
+
+        //         item.classList.remove('active');
+
+        //         item.nextElementSibling.classList.remove('show');
+
+        //         item.nextElementSibling.style.maxHeight = '0';
+
+        //     }
+
+        // });
+
+    });
+
+})
+
+
+    // Optional: Category Filtering
+
+const categoryBtns = document.querySelectorAll('.category-btn')
+
+
+    categoryBtns.forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        // Remove active class from all buttons
+
+        categoryBtns.forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to clicked button
+
+        btn.classList.add('active')
+
+
+            const category = btn.dataset.category;
+
+        const faqItems = document.querySelectorAll('.faq-item')
+
+
+            faqItems.forEach(item => {
+
+            if (category === 'all' || item.dataset.category === category) {
+
+                item.style.display = 'block';
+
+            } else {
+
+                item.style.display = 'none';
+
+            }
+
+        });
+
+
+    });
+
+});
+
+
+let button=document.getElementById("send")
+let text=document.getElementById("text")
+button.addEventListener("click",()=>{
+    text.value=""
+})
+});
+
+
+
+
+</script>
+</body>
+</html>

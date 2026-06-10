@@ -1,0 +1,85 @@
+/* Math Header */ 
+
+.math-header { 
+background: linear-gradient(135deg, #8b5cf6, #6d28d9); 
+color: white; 
+padding: 4rem 0; 
+text-align: center; 
+
+}  .math-header h1 { 
+font-size: 2.5rem; 
+margin-bottom: 1rem; 
+
+}  .math-header h1 i { 
+margin-right: 1rem; 
+
+}  .math-header p { 
+font-size: 1.2rem; 
+opacity: 0.9; 
+
+}  /* Math Tools Grid */ 
+
+.math-tools { 
+padding: 4rem 0; 
+
+}  .math-grid { 
+display: grid; 
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+gap: 2rem; 
+margin-top: 2rem; 
+
+}  /* Math-specific Calculator Card Styling */ 
+
+.calculator-card { 
+/* Inherits core styles from style.css */ 
+border-top: 4px solid #8b5cf6; 
+padding: 2rem; 
+
+}  /* Only keep math-specific overrides */ 
+
+.calculator-card .card-icon { 
+font-size: 2rem; 
+color: white; 
+margin-bottom: 1.5rem; 
+
+}  .calculator-card h3 { 
+color: #6d28d9; 
+margin-bottom: 1rem; 
+
+}  .calculator-card p { 
+color: #6b7280; 
+margin-bottom: 1.5rem; 
+
+}  .card-badge { 
+display: inline-block; 
+padding: 0.25rem 0.75rem; 
+background: #ede9fe; 
+color: #6d28d9; 
+border-radius: 50px; 
+font-size: 0.8rem; 
+font-weight: 500; 
+
+}  .bg-purple { 
+background-color: #8b5cf6; 
+
+}  /* Responsive Adjustments */ 
+
+@media (max-width: 768px) { 
+.math-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+} 
+ 
+.math-header h1 { 
+    font-size: 2rem; 
+} 
+
+}  @media (max-width: 480px) { 
+.math-grid { 
+    grid-template-columns: 1fr; 
+} 
+ 
+.calculator-card { 
+    padding: 1.5rem; 
+} 
+
+} 

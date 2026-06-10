@@ -1,0 +1,484 @@
+<!DOCTYPE html>   
+
+<html lang="en">   
+
+<head>   
+
+    <meta charset="UTF-8">   
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Area Calculator | CalcMaster</title>   
+
+    <meta name="description" content="Calculate the area of various shapes with our free online calculator. Get instant results for rectangles, circles, triangles, and more.">   
+<link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="css/style.css">   
+
+    <link rel="stylesheet" href="css/calculator.css">   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+
+</head><body><nav class="navbar">   
+
+    <div class="container">   
+
+        <a href="index.html" class="logo">CalcMaster</a>   
+
+        <div class="nav-links">   
+
+            <a href="index.html">Home</a>   
+
+            <a href="index.html#categories">Categories</a>   
+
+            <a href="about.html">About</a>   
+
+            <div class="search-container">   
+
+                <input type="text" placeholder="Search calculators..." id="search-input">   
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>   
+
+            </div>   
+
+        </div>   
+
+        <div class="hamburger">   
+
+            <span></span>   
+
+            <span></span>   
+
+            <span></span>   
+
+        </div>   
+
+    </div>   
+
+</nav>   
+
+<main class="calculator-container">   
+
+        <div class="calculator-header">   
+
+            <h1>Area Calculator</h1>   
+
+            <p>Calculate areas of different shapes and convert between area units</p>   
+
+        </div>   
+
+           
+
+        <div class="calculator-content">   
+
+            <div class="calculator-form">   
+
+                <div class="input-group">   
+
+                    <label for="shape">Select Shape</label>   
+
+                    <select id="shape">   
+
+                        <option value="square">Square</option>   
+
+                        <option value="rectangle">Rectangle</option>   
+
+                        <option value="circle">Circle</option>   
+
+                        <option value="triangle">Triangle</option>   
+
+                        <option value="trapezoid">Trapezoid</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <div id="shape-inputs">   
+
+                    <!-- Dynamic inputs will be inserted here based on shape selection -->   
+
+                    <div class="input-group" id="side1-group">   
+
+                        <label for="side1">Side Length</label>   
+
+                        <input type="number" id="side1" placeholder="Enter length">   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <div class="input-group">   
+
+                    <label for="unit">Unit</label>   
+
+                    <select id="unit">   
+
+                        <option value="sqm">Square meters (m2)</option>   
+
+                        <option value="sqft">Square feet (ft <sup>2</sup> )</option>   
+
+                        <option value="sqin">Square inches (inch)</option>   
+
+                        <option value="hectare">Hectares</option>   
+
+                        <option value="acre">Acres</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <button class="calculate-btn" id="calculate-area">Calculate</button>   
+
+                   
+
+                <div class="result-container" id="result-container">   
+
+                    <p class="result-label">Area:</p>   
+
+                    <p class="result-value" id="area-result">0.00</p>   
+
+                </div>   
+
+            </div>   
+
+               
+
+            <div class="units-section">   
+
+                <h2>Area Measurement</h2>   
+
+                <p>Area is the quantity that expresses the extent of a two-dimensional region, shape, or planar lamina.</p>   
+
+                   
+
+                
+                <h3>How to Use This Tool</h3>                 <ol>                     <li>Enter the required values in the input fields</li>                     <li>Select any necessary options or units from the dropdown menus</li>                     <li>Click the calculate button</li>                     <li>View your results in the result section</li>                 </ol>                                  <h3>Why We Use This Tool</h3>                 <ul>                     <li>Accuracy: Get precise calculations without manual computation errors</li>                     <li>Efficiency: Save time by quickly performing complex calculations</li>                     <li>Learning: Understand the formulas and concepts behind the calculations</li>                     <li>Decision-making: Use reliable data to make informed choices</li>                 </ul>                 <h3>Common Area Formulas</h3>   
+
+                <ul>   
+
+                    <li><strong>Square:</strong> Area = side X side</li>   
+
+                    <li><strong>Rectangle:</strong> Area = length x width</li>   
+
+                    <li><strong>Circle:</strong> Area =  πr²</li>   
+
+                    <li><strong>Triangle:</strong> Area =  (base × height) / 2</li>   
+
+                    <li><strong>Trapezoid:</strong> Area = (1/2) × (base₁ + base₂) × height
+t</li>   
+
+                </ul>   
+
+                   
+
+                <h3>Area Unit Conversions</h3>   
+
+                <table>   
+
+                    <tr>   
+
+                        <th>Unit</th>   
+
+                        <th>Square Meters</th>   
+
+                        <th>Square Feet</th>   
+
+                        <th>Square Inches</th>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>1 Square Meter</td>   
+
+                        <td>1</td>   
+
+                        <td>10.764</td>   
+
+                        <td>1550</td>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>1 Square Foot</td>   
+
+                        <td>0.0929</td>   
+
+                        <td>1</td>   
+
+                        <td>144</td>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>1 Square Inch</td>   
+
+                        <td>0.000645</td>   
+
+                        <td>0.00694</td>   
+
+                        <td>1</td>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>1 Acre</td>   
+
+                        <td>4046.86</td>   
+
+                        <td>43560</td>   
+
+                        <td>-</td>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>1 Hectare</td>   
+
+                        <td>10000</td>   
+
+                        <td>107639</td>   
+
+                        <td>-</td>   
+
+                    </tr>   
+
+                </table>   
+
+                   
+
+                <h3>Practical Applications</h3>   
+
+                <ul>   
+
+                    <li><strong>Construction:</strong> Calculating floor areas, wall surfaces</li>   
+
+                    <li><strong>Agriculture:</strong> Measuring land areas for farming</li>   
+
+                    <li><strong>Real Estate:</strong> Determining property sizes</li>   
+
+                    <li><strong>Manufacturing:</strong> Calculating material requirements</li>   
+
+                </ul>   
+
+            </div>   
+
+        </div>   
+
+    </main>  
+
+<section class="rating-section">
+    <div class="container">
+        <h2>Rate This Calculator</h2>
+        <p>Your feedback helps us improve our tools. How would you rate your experience with this calculator?</p>
+        
+        <div class="rating-stars">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 stars">★</label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">★</label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">★</label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">★</label>
+            
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">★</label>
+        </div>
+        
+        <div class="feedback-form" id="feedbackForm">
+            <textarea placeholder="Optional: Share your feedback or suggestions..." rows="3"></textarea>
+            <button type="button" class="submit-feedback-btn">Submit Rating</button>
+        </div>
+        
+        <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+ <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p >
+                    </div> 
+
+            </div>  
+
+            <div class="faq-item" >
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+
+
+
+
+<footer>   
+
+        <div class="container">   
+
+            <div class="footer-content">   
+
+                <div class="footer-section">   
+
+                    <h3>CalcMaster</h3>   
+
+                    <p>Your comprehensive calculator solution for all needs.</p>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Quick Links</h3>   
+
+                    <ul>   
+
+                        <li><a href="index.html">Home</a></li>   
+
+                        <li><a href="index.html#categories">Categories</a></li>   
+
+                        <li><a href="about.html">About</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+               <div class="footer-section">   
+
+                    <h4 class="footer-heading">Calculator Types</h4>   
+
+                    <ul class="footer-links">   
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>   
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>   
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>   
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>   
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h4 class="footer-heading">Support & Legal</h4>   
+
+                    <ul class="footer-links">   
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>   
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>   
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>   
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>   
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+            </div>   
+
+            <div class="footer-bottom">   
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>   
+
+            </div>   
+
+        </div>   
+
+    </footer>   
+
+<script src="js/main.js"></script>   
+
+    <script src="js/calculators/area.js"></script>   
+
+</body>   
+
+</html>
+
+

@@ -1,0 +1,514 @@
+<!DOCTYPE html>   
+
+<html lang="en">   
+
+<head>   
+
+    <meta charset="UTF-8">   
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>About CalcMaster | Your Trusted Calculator Resource</title>   
+
+    <meta name="description" content="Learn about CalcMaster - our mission, team, and why we're passionate about making calculations easy for everyone.">   
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">   
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+<style>
+    /* Global Styles */ 
+
+:root { 
+ --primary-color: #4361ee; 
+ --secondary-color: #3f37c9; 
+ --accent-color: #4895ef; 
+ --light-color: #f8f9fa; 
+ --dark-color: #212529; 
+ --success-color: #4cc9f0; 
+ --warning-color: #f72585; 
+ --border-radius: 8px; 
+ --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+ --transition: all 0.3s ease; 
+
+} 
+ * { 
+ margin: 0; 
+ padding: 0; 
+ box-sizing: border-box; 
+
+}  body { 
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+ line-height: 1.6; 
+ color: var(--dark-color); 
+ background-color: var(--light-color);   }  .container { 
+ width: 90%; 
+ max-width: 1200px; 
+ margin: 0 auto; 
+ padding: 0 20px; 
+
+}  a { 
+ text-decoration: none; 
+ color: inherit; 
+
+}  .btn { 
+ display: inline-block; 
+ padding: 10px 20px; 
+ background-color: var(--primary-color); 
+ color: white; 
+ border: none; 
+ border-radius: var(--border-radius); 
+ cursor: pointer; 
+ transition: var(--transition); 
+
+}  .btn:hover { 
+ background-color: var(--secondary-color); 
+ transform: translateY(-2px); 
+
+}  
+/* About Hero */
+
+.about-hero {
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+padding: 6rem 0 4rem;
+text-align: center;
+
+}.about-hero h1 {
+font-size: 2.8rem;
+margin-bottom: 1rem;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+
+}.about-hero h1 span {
+color: var(--accent-color);
+
+}.about-hero .subtitle {
+font-size: 1.3rem;
+opacity: 0.9;
+max-width: 700px;
+margin: 0 auto;
+
+}/* About Sections */
+
+.about-section {
+padding: 4rem 0;
+
+}.about-content {
+display: flex;
+align-items: center;
+gap: 3rem;
+
+}.about-text {
+flex: 1;
+
+}.about-text h2 {
+font-size: 2.2rem;
+color: var(--dark-color);
+margin-bottom: 1.5rem;
+
+}.about-text p {
+font-size: 1.1rem;
+line-height: 1.7;
+margin-bottom: 1.5rem;
+color: #555;
+
+}.about-image {
+flex: 1;
+
+}.rounded-image {
+border-radius: 12px;
+box-shadow: var(--box-shadow);
+max-width: 100%;
+
+}/* Mission Section */
+
+.mission-section {
+padding: 4rem 0;
+background-color: #f8f9fa;
+
+}.mission-card {
+background: white;
+border-radius: var(--border-radius);
+padding: 3rem;
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+box-shadow: var(--box-shadow);
+
+}.mission-icon {
+font-size: 2.5rem;
+color: var(--primary-color);
+margin-bottom: 1.5rem;
+
+}.mission-card h2 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+color: var(--dark-color);
+
+}.mission-list {
+list-style: none;
+text-align: left;
+max-width: 600px;
+margin: 2rem auto 0;
+
+}.mission-list li {
+margin-bottom: 1rem;
+font-size: 1.1rem;
+display: flex;
+align-items: flex-start;
+gap: 1rem;
+
+}.mission-list i {
+color: var(--accent-color);
+margin-top: 3px;
+
+}/* Team Section */
+
+.team-section {
+padding: 5rem 0;
+text-align: center;
+
+}.team-section h2 {
+font-size: 2.2rem;
+color: var(--dark-color);
+margin-bottom: 1rem;
+
+}.section-subtitle {
+font-size: 1.2rem;
+color: #666;
+max-width: 600px;
+margin: 0 auto 3rem;
+
+}.team-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+
+}.team-member {
+background: white;
+border-radius: var(--border-radius);
+padding: 2rem;
+box-shadow: var(--box-shadow);
+transition: var(--transition);
+
+}.team-member:hover {
+transform: translateY(-5px);
+
+}.team-photo {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 1.5rem;
+border: 4px solid var(--light-color);
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}.team-member h3 {
+font-size: 1.4rem;
+margin-bottom: 0.5rem;
+color: var(--dark-color);
+
+}.role {
+color: var(--primary-color);
+font-weight: 500;
+margin-bottom: 1rem;
+
+}.bio {
+color: #666;
+line-height: 1.6;
+
+}/* Why Section */
+
+.why-section {
+padding: 5rem 0;
+background-color: #f8f9fa;
+
+}.why-section h2 {
+text-align: center;
+font-size: 2.2rem;
+color: var(--dark-color);
+margin-bottom: 1rem;
+
+}.reasons-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+
+}.reason-card {
+background: white;
+border-radius: var(--border-radius);
+padding: 2rem;
+text-align: center;
+box-shadow: var(--box-shadow);
+transition: var(--transition);
+
+}.reason-card:hover {
+transform: translateY(-5px);
+
+}.reason-icon {
+font-size: 2.5rem;
+color: var(--primary-color);
+margin-bottom: 1.5rem;
+
+}.reason-card h3 {
+font-size: 1.4rem;
+margin-bottom: 1rem;
+color: var(--dark-color);
+
+}.reason-card p {
+color: #666;
+line-height: 1.6;
+
+}/* CTA Section */
+
+.cta-section {
+padding: 5rem 0;
+text-align: center;
+background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+color: white;
+
+}.cta-section h2 {
+font-size: 2.2rem;
+margin-bottom: 2rem;
+
+}.cta-button {
+display: inline-block;
+padding: 1rem 2rem;
+background-color: white;
+color: var(--primary-color);
+border-radius: var(--border-radius);
+font-size: 1.2rem;
+font-weight: 600;
+transition: var(--transition);
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}.cta-button:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+}.cta-subtext {
+margin-top: 1.5rem;
+opacity: 0.9;
+
+}.cta-subtext a {
+color: white;
+text-decoration: underline;
+
+}/* Responsive Adjustments */
+
+@media (max-width: 992px) {
+.about-content {
+    flex-direction: column;
+}
+
+.about-text, .about-image {
+    flex: none;
+    width: 100%;
+}
+
+.about-image {
+    order: -1;
+    margin-bottom: 2rem;
+}
+
+}@media (max-width: 768px) {
+.about-hero h1 {
+    font-size: 2.2rem;
+}
+
+.team-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}@media (max-width: 480px) {
+.about-hero h1 {
+    font-size: 1.8rem;
+}
+
+.mission-card {
+    padding: 2rem 1.5rem;
+}
+
+}/* Navigation */ 
+
+</style>
+</head>
+<body>   
+
+    <!-- Navigation Bar -->   
+
+<!-- Hero Section -->   
+
+    <section class="about-hero">   
+
+        <div class="container">   
+
+            <h1>We Believe Everyone Deserves <span>Easy Calculations</span></h1>   
+
+            <p class="subtitle">CalcMaster was born from a simple idea that calculationdns must me easy.</p>   
+
+        </div>   
+
+    </section>   
+
+<!-- Our Story -->   
+
+    <section class="about-section">   
+
+        <div class="container">   
+
+            <div class="about-content">   
+
+                <div class="about-text">   
+
+                    <h2>Our Humble Beginnings</h2>   
+
+                    <p>Back in May 2025,The founder Danyal was helping his younger brother with homework when he  realized that how many people were struggle with everyday calculations. Then he started as a weekend project to build a simple BMI calculator quickly but the idea  grew into something very bigger.</p>   
+
+                    <p>Today, we're a small but helpful website in math everyday, health, and finance. We believe that no should face difficulties in calculations.Moreover we have calculators for your service.</p>   
+
+                </div>   
+
+                           </div>   
+
+        </div>   
+
+    </section>   
+
+<!-- Mission Section -->   
+
+    <section class="mission-section">   
+
+        <div class="container">   
+
+            <div class="mission-card">   
+
+                <div class="mission-icon">   
+
+                    <i class="fas fa-bullseye"></i>   
+
+                </div>   
+
+                <h2>Our Mission</h2>   
+
+                <p>To quit the strugles for calculations and provide help.</p>   
+
+                <ul class="mission-list">   
+
+                    <li><i class="fas fa-check-circle"></i> <strong>Accurate</strong> results on that you can trust</li>   
+
+                    <li><i class="fas fa-check-circle"></i> <strong>Simple</strong> interfaces anyone can use</li>   
+
+                    <li><i class="fas fa-check-circle"></i> <strong>Free</strong> accees forever</li>   
+
+                    <li><i class="fas fa-check-circle"></i> <strong>Educational</strong> explanation about calculators</li>   
+
+                </ul>   
+
+            </div>   
+
+        </div>   
+
+    </section>   
+
+<!-- Why Choose Us -->   
+
+    <section class="why-section">   
+
+        <div class="container">   
+
+            <h2>Why People Should Choose CalcMaster</h2>   
+
+            <div class="reasons-grid">   
+
+                <div class="reason-card">   
+
+                    <div class="reason-icon">   
+
+                        <i class="fas fa-heart"></i>   
+
+                    </div>   
+
+                    <h3>We Care</h3>   
+
+                    <p>We read every piece of feedback and also work for the need of users.</p>   
+
+                </div>   
+
+                   
+
+                <div class="reason-card">   
+
+                    <div class="reason-icon">   
+
+                        <i class="fas fa-lock"></i>   
+
+                    </div>   
+
+                    <h3>No Nonsense</h3>   
+
+                    <p> No paywalls. No hidden data collection. Simple calculators.</p>   
+
+                </div>   
+
+                   
+
+                <div class="reason-card">   
+
+                    <div class="reason-icon">   
+
+                        <i class="fas fa-lightbulb"></i>   
+
+                    </div>   
+
+                    <h3>Learn As You Go</h3>   
+
+                    <p>We explain logic and formulae behind the answer.</p>   
+
+                </div>   
+
+            </div>   
+
+        </div>   
+
+    </section>   
+
+<!-- CTA Section -->   
+
+    <section class="cta-section">   
+
+        <div class="container">   
+
+            <h2>Ready to Make Math Easier?</h2>   
+
+            <a href="index.html" class="cta-button">Explore Our Calculators</a>   
+
+            <p class="cta-subtext">or <a href="contact.html">get in touch</a> if you have questions</p>   
+
+        </div>   
+
+    </section>   
+
+<!-- Footer -->   
+
+<script src="js/main.js"></script>   
+
+</body>   
+
+</html>
+
+

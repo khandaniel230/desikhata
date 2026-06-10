@@ -1,0 +1,430 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Volume Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Calculate the volume of 3D shapes with our free online calculator. Get instant results for cubes, spheres, cylinders, and more.">  
+<link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1>Volume Calculator</h1>  
+
+            <p>Calculate volumes of different 3D shapes and convert between volume units</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <div class="input-group">  
+
+                    <label for="shape">Select Shape</label>  
+
+                    <select id="shape">  
+
+                        <option value="cube">Cube</option>  
+
+                        <option value="rectangular-prism">Rectangular Prism</option>  
+
+                        <option value="cylinder">Cylinder</option>  
+
+                        <option value="sphere">Sphere</option>  
+
+                        <option value="cone">Cone</option>  
+
+                        <option value="pyramid">Pyramid</option>  
+
+                    </select>  
+
+                </div>  
+
+                  
+
+                <div id="shape-inputs">  
+
+                    <div class="input-group" id="length-group">  
+
+                        <label for="length">Length</label>  
+
+                        <input type="number" id="length" placeholder="Enter length">  
+
+                    </div>  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="unit">Unit</label>  
+
+                    <select id="unit">  
+
+                        <option value="cubic-meter">Cubic meters (m³)</option>  
+
+                        <option value="cubic-centimeter">Cubic centimeters (cm³)</option>  
+
+                        <option value="liter">Liters (L)</option>  
+
+                        <option value="milliliter">Milliliters (mL)</option>  
+
+                        <option value="gallon">Gallons (gal)</option>  
+
+                        <option value="quart">Quarts (qt)</option>  
+
+                    </select>  
+
+                </div>  
+
+                  
+
+                <button class="calculate-btn" id="calculate-volume">Calculate</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <p class="result-label">Volume:</p>  
+
+                    <p class="result-value" id="volume-result">0.00</p>  
+
+                </div>  
+
+            </div>  
+
+              
+<div class="units-section">  
+    <h2>About Volume Conversion</h2>  
+    <p>A volume converter is an essential tool for converting between different units of volume measurement. It's particularly useful in cooking, chemistry, engineering, and any situation where precise volume measurements are required across different measurement systems.</p>  
+    
+    <h3>How to Use This Volume Converter</h3>                 
+    <ol>                     
+        <li>Enter the volume value you want to convert</li>            
+        <li>Select the unit you're converting from (e.g., liters, gallons, milliliters)</li>    
+        <li>Select the unit you want to convert to</li>
+        <li>Click the convert button</li>                   
+        <li>View your converted volume value</li>                   
+        <li>Use the reset button to clear values and perform new conversions</li>                 
+    </ol>                         
+
+    <h3>Why We Use a Volume Converter</h3>                 
+    <ul>                   
+        <li>Cooking and baking: Accurately convert recipes between metric and imperial measurements</li>                    
+        <li>Scientific applications: Ensure precision in experiments and formulations</li>                   
+        <li>International communication: Standardize measurements across different countries</li>
+        <li>Educational purposes: Learn and understand different measurement systems</li>
+        <li>DIY projects: Calculate correct volumes for home improvement and crafting</li>                               
+    </ul>               
+
+    <h3>Common Volume Units Explained</h3>  
+    <table>  
+        <tr>  
+            <th>Unit</th>  
+            <th>System</th>  
+            <th>Equivalent</th>  
+        </tr>  
+        <tr>  
+            <td>Milliliter (mL)</td>  
+            <td>Metric</td>  
+            <td>1/1000 of a liter</td>  
+        </tr>  
+        <tr>  
+            <td>Liter (L)</td>  
+            <td>Metric</td>  
+            <td>Base metric unit of volume</td>  
+        </tr>  
+        <tr>  
+            <td>Teaspoon (tsp)</td>  
+            <td>US Customary</td>  
+            <td>About 4.93 mL</td>  
+        </tr>  
+        <tr>  
+            <td>Tablespoon (tbsp)</td>  
+            <td>US Customary</td>  
+            <td>3 teaspoons or about 14.79 mL</td>  
+        </tr>  
+        <tr>  
+            <td>Fluid Ounce (fl oz)</td>  
+            <td>US Customary</td>  
+            <td>About 29.57 mL</td>  
+        </tr>  
+        <tr>  
+            <td>Cup (c)</td>  
+            <td>US Customary</td>  
+            <td>8 fluid ounces or about 236.59 mL</td>  
+        </tr>  
+        <tr>  
+            <td>Pint (pt)</td>  
+            <td>US Customary</td>  
+            <td>2 cups or about 473.18 mL</td>  
+        </tr>  
+        <tr>  
+            <td>Quart (qt)</td>  
+            <td>US Customary</td>  
+            <td>2 pints or about 0.95 liters</td>  
+        </tr>  
+        <tr>  
+            <td>Gallon (gal)</td>  
+            <td>US Customary</td>  
+            <td>4 quarts or about 3.79 liters</td>  
+        </tr>  
+    </table>  
+    
+    <h3>Measurement Systems</h3>  
+    <p>Volume measurements vary across different systems used around the world:</p>
+    <ul>  
+        <li><strong>Metric System:</strong> Used globally, based on liters and milliliters</li>  
+        <li><strong>US Customary Units:</strong> Used in the United States for everyday measurements</li>  
+        <li><strong>British Imperial Units:</strong> Similar but not identical to US customary units</li>  
+        <li><strong>Specialized Units:</strong> Certain industries use specific units like barrels for oil</li>  
+    </ul>  
+    
+    <h3>Conversion Formulas</h3>  
+    <p>Our converter uses precise conversion factors between units. Some common conversions include:</p>
+    <ul>
+        <li>1 liter = 1000 milliliters</li>
+        <li>1 US gallon = 3.78541 liters</li>
+        <li>1 US fluid ounce = 29.5735 milliliters</li>
+        <li>1 US cup = 236.588 milliliters</li>
+        <li>1 US pint = 473.176 milliliters</li>
+        <li>1 US quart = 0.946353 liters</li>
+        <li>1 teaspoon = 4.92892 milliliters</li>
+        <li>1 tablespoon = 14.7868 milliliters</li>
+    </ul>
+    
+    <h3>Applications of Volume Conversion</h3>
+    <ul>
+        <li><strong>Culinary Arts:</strong> Adapting recipes between measurement systems</li>
+        <li><strong>Chemistry:</strong> Preparing solutions with precise concentrations</li>
+        <li><strong>Engineering:</strong> Calculating capacities and flow rates</li>
+        <li><strong>Medicine:</strong> Dosage calculations and fluid measurements</li>
+        <li><strong>Agriculture:</strong> Measuring irrigation requirements</li>
+        <li><strong>Automotive:</strong> Engine displacement and fluid capacities</li>
+    </ul>
+    
+    <div class="fact-card">  
+        <i class="fas fa-lightbulb"></i>  
+        <p>The US gallon is different from the imperial gallon used in the UK. A US gallon contains approximately 3.785 liters, while an imperial gallon contains about 4.546 liters. This 20% difference is important in international transactions!</p>  
+    </div>  
+</div>
+
+<section class="rating-section">
+    <div class="container">
+        <h2>Rate This Calculator</h2>
+        <p>Your feedback helps us improve our tools. How would you rate your experience with this calculator?</p>
+        
+        <div class="rating-stars">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 stars">★</label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">★</label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">★</label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">★</label>
+            
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">★</label>
+        </div>
+        
+        <div class="feedback-form" id="feedbackForm">
+            <textarea placeholder="Optional: Share your feedback or suggestions..." rows="3"></textarea>
+            <button type="button" class="submit-feedback-btn">Submit Rating</button>
+        </div>
+        
+        <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</section>
+
+<div class="faq-container">  
+    <div class="faq-item">  
+        <div class="faq-question">  
+            <h3>Are these calculators really free to use?</h3>  
+            <i class="fas fa-chevron-down"></i>  
+        </div>  
+        <div class="faq-answer">  
+            <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+        </div>  
+    </div>  
+    <div class="faq-item">  
+        <div class="faq-question">  
+            <h3>How accurate are the calculations?</h3>  
+            <i class="fas fa-chevron-down"></i>  
+        </div>  
+        <div class="faq-answer">  
+            <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+        </div>  
+    </div>  
+    <div class="faq-item">  
+        <div class="faq-question">  
+            <h3>Do you store my personal data?</h3>  
+            <i class="fas fa-chevron-down"></i>  
+        </div>  
+        <div class="faq-answer">  
+            <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p>
+        </div> 
+    </div>  
+    <div class="faq-item">
+        <div class="faq-question">  
+            <h3>Can I request a new calculator?</h3>  
+            <i class="fas fa-chevron-down"></i>  
+        </div>  
+        <div class="faq-answer">  
+            <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+        </div>  
+    </div>  
+</div>  
+        </div>
+           <footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+               <div class="footer-section">  
+
+                    <h4 class="footer-heading">Calculator Types</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>  
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>  
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>  
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>  
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h4 class="footer-heading">Support & Legal</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>  
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>  
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>  
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/volume.js"></script>  
+
+</body>  
+
+</html> 

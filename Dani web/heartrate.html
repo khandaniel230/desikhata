@@ -1,0 +1,426 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Heart Rate Calculator | CalcMaster</title>  
+    <meta name="description" content="Calculate your target heart rate zones for exercise">  
+    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="css/calculator.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head><body><nav class="navbar">  
+    <div class="container">  
+        <a href="index.html" class="logo">CalcMaster</a>  
+        <div class="nav-links">  
+            <a href="index.html">Home</a>  
+            <a href="index.html#categories">Categories</a>  
+            <a href="about.html">About</a>  
+            <div class="search-container">  
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+            </div>  
+        </div>  
+        <div class="hamburger">  
+            <span></span>  
+            <span></span>  
+            <span></span>  
+        </div>  
+    </div>  
+</nav>  
+
+    <!-- Navigation (same as other calculator pages) -->  
+
+      
+
+    <main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1><i class="fas fa-heartbeat"></i> Heart Rate Calculator</h1>  
+
+            <p>Calculate your target heart rate zones for exercise</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <form id="heartrate-form">  
+
+                    <div class="input-group">  
+
+                        <label for="age">Age (years)</label>  
+
+                        <input type="number" id="age" min="15" max="100" required>  
+
+                    </div>  
+
+                      
+
+                    <div class="input-group">  
+
+                        <label for="resting-hr">Resting Heart Rate (bpm)</label>  
+
+                        <input type="number" id="resting-hr" min="40" max="100" required>  
+
+                        <small>Measure your pulse when completely at rest</small>  
+
+                    </div>  
+
+                      
+
+                    <button type="submit" class="calculate-btn">Calculate Heart Rate Zones</button>  
+
+                </form>  
+
+                  
+
+                <div class="result-container" id="heartrate-result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Maximum Heart Rate:</p>  
+
+                        <p class="result-value" id="max-hr">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Zone 1 (50-60%): Very Light</p>  
+
+                        <p class="result-value" id="zone1">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Zone 2 (60-70%): Light</p>  
+
+                        <p class="result-value" id="zone2">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Zone 3 (70-80%): Moderate</p>  
+
+                        <p class="result-value" id="zone3">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Zone 4 (80-90%): Hard</p>  
+
+                        <p class="result-value" id="zone4">-</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Zone 5 (90-100%): Maximum</p>  
+
+                        <p class="result-value" id="zone5">-</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+              
+
+            <div class="units-section">  
+
+                <h2>About Heart Rate Zones</h2>  
+
+                <p>Heart rate zones help you exercise at the right intensity for your fitness goals. Different zones provide different benefits, from fat burning to peak performance training.</p>  
+
+                  
+
+                
+                <h3>How to Use Heart rate calculator</h3>                
+                 <ol>                     <li>Enter your age </li>            
+                             <li>Enter your bpm : <br>The number of times your heart contracts (beats) in a 60-second period.</li>    
+                    
+                    <li>Click the calculate button</li>                   
+                      <li>View your results in the result section</li>                 </ol>                         
+
+                      <h3>Why We Use Heart rate calculator</h3>                 <ul>                   
+                          <li>To Determine Safe and Effective Exercise Zones (The Primary Reason)</li>                    
+                           <li> To Monitor Overall Health and Fitness Progress</li>                   
+                                     </ul>               <li>To Ensure Safety During Exercise</li>
+                                     <li>For Medical Monitoring and Awareness</li>
+                               
+                               <h3>Heart Rate Zone Benefits</h3>  
+
+                <table>  
+
+                    <tr>  
+
+                        <th>Zone</th>  
+
+                        <th>Intensity</th>  
+                        <th>Benefits</th>  
+                    </tr>  
+                    <tr>  
+                        <td>Zone 1 (50-60%)</td>  
+                        <td>Very Light</td>  
+                        <td>Recovery, improves overall health</td>  
+                    </tr>  
+                <tr>  
+                    <td>Zone 2 (60-70%)</td>  
+                     <td>Light</td>  
+                        <td>Fat burning, builds endurance</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Zone 3 (70-80%)</td>  
+
+                        <td>Moderate</td>  
+
+                        <td>Aerobic fitness, improves circulation</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Zone 4 (80-90%)</td>  
+
+                        <td>Hard</td>  
+
+                        <td>Anaerobic capacity, improves performance</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Zone 5 (90-100%)</td>  
+
+                        <td>Maximum</td>  
+
+                        <td>Peak performance, speed training</td>  
+
+                    </tr>  
+
+                </table>  
+
+                  
+
+                <h3>How to Measure Your Heart Rate</h3>  
+
+                <ul>  
+
+                    <li><strong>Wrist:</strong> Place two fingers on your wrist below the thumb</li>  
+
+                    <li><strong>Neck:</strong> Place two fingers on your neck beside the windpipe</li>  
+
+                    <li><strong>Count</strong> beats for 30 seconds and multiply by 2</li>  
+
+                    <li><strong>Use a heart rate monitor</strong> for more accurate readings during exercise</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Factors Affecting Heart Rate</h3>  
+
+                <ul>  
+
+                    <li><strong>Age:</strong> Maximum heart rate decreases with age</li>  
+
+                    <li><strong>Fitness level:</strong> Fit individuals often have lower resting heart rates</li>  
+
+                    <li><strong>Medications:</strong> Some medications can affect heart rate</li>  
+
+                    <li><strong>Stress:</strong> Emotional stress can increase heart rate</li>  
+
+                    <li><strong>Caffeine:</strong> Can temporarily increase heart rate</li>  
+
+                </ul>  
+
+                  
+
+                <div class="fact-card">  
+
+                    <i class="fas fa-lightbulb"></i>  
+
+                    <p>A well-trained athlete might have a resting heart rate as low as 40 bpm, while the average adult has a resting heart rate of 60-100 bpm.</p>  
+
+                </div>  
+
+            </div>  
+
+        </div>  
+
+    </main>
+
+  <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p >
+                    </div> 
+
+            </div>  
+
+            <div class="faq-item" >
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+         <footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+               <div class="footer-section">  
+
+                    <h4 class="footer-heading">Calculator Types</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>  
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>  
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>  
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>  
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h4 class="footer-heading">Support & Legal</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>  
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>  
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>  
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+<script src="js/main.js"></script>
+    <script src="js/health-calculators.js"></script>  
+
+</body>  
+
+</html>
+
+

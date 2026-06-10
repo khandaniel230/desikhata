@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Base Converter | CalcMaster</title>
+    <meta name="description" content="Convert numbers between different bases: binary, decimal, octal, hexadecimal. Learn about number systems and their applications in computing.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/additional-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .base-checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .base-checkbox {
+            display: flex;
+            align-items: center;
+        }
+        
+        .base-checkbox input {
+            margin-right: 8px;
+        }
+        
+        .result-item {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">CalcMaster</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="about.html">About</a>
+                <div class="search-container">
+                    <input type="text" placeholder="Search calculators..." id="search-input">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="calculator-container">
+        <div class="calculator-header">
+            <h1><i class="fas fa-exchange-alt"></i> Number Base Converter</h1>
+            <p>Convert numbers between binary, decimal, octal, and hexadecimal</p>
+        </div>
+          
+        <div class="calculator-content">
+            <div class="calculator-form">
+                <form id="base-converter-form">
+                    <div class="input-group">
+                        <label for="input-number">Enter Number</label>
+                        <input type="text" id="input-number" placeholder="e.g. 255, 1010, FF" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="from-base">From Base</label>
+                        <select id="from-base" required>
+                            <option value="2">Binary (Base 2)</option>
+                            <option value="8">Octal (Base 8)</option>
+                            <option value="10" selected>Decimal (Base 10)</option>
+                            <option value="16">Hexadecimal (Base 16)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Convert To:</label>
+                        <div class="base-checkboxes">
+                            <label class="base-checkbox">
+                                <input type="checkbox" name="to-base" value="2" checked> Binary
+                            </label>
+                            <label class="base-checkbox">
+                                <input type="checkbox" name="to-base" value="8" checked> Octal
+                            </label>
+                            <label class="base-checkbox">
+                                <input type="checkbox" name="to-base" value="10" checked> Decimal
+                            </label>
+                            <label class="base-checkbox">
+                                <input type="checkbox" name="to-base" value="16" checked> Hexadecimal
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="calculate-btn"><i class="fas fa-sync-alt"></i> Convert</button>
+                </form>
+                
+                <div class="result-container" id="result-container">
+                    <div class="result-item" id="binary-result">
+                        <p class="result-label">Binary (Base 2):</p>
+                        <p class="result-value" id="binary-value">-</p>
+                    </div>
+                    <div class="result-item" id="octal-result">
+                        <p class="result-label">Octal (Base 8):</p>
+                        <p class="result-value" id="octal-value">-</p>
+                    </div>
+                    <div class="result-item" id="decimal-result">
+                        <p class="result-label">Decimal (Base 10):</p>
+                        <p class="result-value" id="decimal-value">-</p>
+                    </div>
+                    <div class="result-item" id="hexadecimal-result">
+                        <p class="result-label">Hexadecimal (Base 16):</p>
+                        <p class="result-value" id="hexadecimal-value">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="units-section">
+                <h2>About Number Bases</h2>
+                <p>A numeral system (or number base) is a writing system for expressing numbers using digits or other symbols in a consistent manner.</p>
+                
+                <h3>Common Number Bases</h3>
+                <h4>Binary (Base 2)</h4>
+                <p>Uses only two digits: 0 and 1. Fundamental to computer systems.</p>
+                <p><strong>Example:</strong> 1010₂ = 10₁₀</p>
+                
+                <h4>Octal (Base 8)</h4>
+                <p>Uses digits 0-7. Sometimes used in computing as a shorthand for binary.</p>
+                <p><strong>Example:</strong> 12₈ = 10₁₀</p>
+                
+                <h4>Decimal (Base 10)</h4>
+                <p>Uses digits 0-9. The standard system for everyday use.</p>
+                <p><strong>Example:</strong> 10₁₀ = 10</p>
+                
+                <h4>Hexadecimal (Base 16)</h4>
+                <p>Uses digits 0-9 and letters A-F. Widely used in computing.</p>
+                <p><strong>Example:</strong> A₁₆ = 10₁₀</p>
+                
+                <h3>How to Use This Tool</h3>
+                <ol>
+                    <li>Enter the number you want to convert</li>
+                    <li>Select the base of the input number</li>
+                    <li>Choose which bases you want to convert to</li>
+                    <li>Click the convert button</li>
+                    <li>View your results in the result section</li>
+                </ol>
+                
+                <h3>Conversion Examples</h3>
+                <h4>Decimal to Binary:</h4>
+                <p>13₁₀ = 1101₂</p>
+                <p>13 ÷ 2 = 6 remainder 1</p>
+                <p>6 ÷ 2 = 3 remainder 0</p>
+                <p>3 ÷ 2 = 1 remainder 1</p>
+                <p>1 ÷ 2 = 0 remainder 1</p>
+                
+                <h4>Binary to Decimal:</h4>
+                <p>1101₂ = 13₁₀</p>
+                <p>1×2³ + 1×2² + 0×2¹ + 1×2⁰ = 8 + 4 + 0 + 1 = 13</p>
+                
+                <h4>Decimal to Hexadecimal:</h4>
+                <p>255₁₀ = FF₁₆</p>
+                <p>255 ÷ 16 = 15 remainder 15 (F)</p>
+                <p>15 ÷ 16 = 0 remainder 15 (F)</p>
+                
+                <h3>Applications of Different Number Bases</h3>
+                <ul>
+                    <li><strong>Binary:</strong> Computer processors, digital circuits, data storage</li>
+                    <li><strong>Octal:</strong> Unix file permissions, digital displays</li>
+                    <li><strong>Decimal:</strong> Everyday counting, financial calculations, measurements</li>
+                    <li><strong>Hexadecimal:</strong> Memory addresses, color codes, assembly language</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+
+
+    <section class="rating-section">
+    <div class="container">
+        <h2>Rate This Calculator</h2>
+        <p>Your feedback helps us improve our tools. How would you rate your experience with this calculator?</p>
+        
+        <div class="rating-stars">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="5 stars">★</label>
+            
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="4 stars">★</label>
+            
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="3 stars">★</label>
+            
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="2 stars">★</label>
+            
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1" title="1 star">★</label>
+        </div>
+        
+        <div class="feedback-form" id="feedbackForm">
+            <textarea placeholder="Optional: Share your feedback or suggestions..." rows="3"></textarea>
+            <button type="button" class="submit-feedback-btn">Submit Rating</button>
+        </div>
+        
+        <div class="thank-you-message" id="thankYouMessage" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+ <div class="faq-container">  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Are these calculators really free to use?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Yes, all our calculators are completely free to use with no hidden fees or subscriptions. We believe in providing valuable tools accessible to everyone.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>How accurate are the calculations?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Our calculators use industry-standard formulas and algorithms to ensure maximum accuracy. We regularly update our calculators to reflect the latest standards and practices.</p>  
+
+                </div>  
+
+            </div>  
+
+            <div class="faq-item">  
+
+                <div class="faq-question">  
+
+                    <h3>Do you store my personal data?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>We take privacy seriously. All calculations happen locally in your browser, and we don't store your personal data or calculation inputs on our servers.</p >
+                    </div> 
+
+            </div>  
+
+            <div class="faq-item" >
+                <div class="faq-question">  
+
+                    <h3>Can I request a new calculator?</h3>  
+
+                    <i class="fas fa-chevron-down"></i>  
+
+                </div>  
+
+                <div class="faq-answer">  
+
+                    <p>Absolutely! We're always looking to expand our calculator collection. You can submit your request through our contact form, and we'll consider adding it to our platform.</p>  
+
+                </div>  
+
+            </div>  
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CalcMaster</h3>
+                    <p>Your comprehensive calculator solution for all needs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#categories">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Math Tools</h3>
+                    <ul>
+                        <li><a href="factorail.html">Factorial Calculator</a></li>
+                        <li><a href="base-converter.html">Base Converter</a></li>
+                        <li><a href="quadratic.html">Quadratic Solver</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>info@calcmaster.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('base-converter-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const inputStr = document.getElementById('input-number').value.trim();
+                const fromBase = parseInt(document.getElementById('from-base').value);
+                const toBases = Array.from(document.querySelectorAll('input[name="to-base"]:checked'))
+                                    .map(cb => parseInt(cb.value));
+                
+                if (!inputStr) {
+                    alert('Please enter a number to convert');
+                    return;
+                }
+                
+                if (toBases.length === 0) {
+                    alert('Please select at least one base to convert to');
+                    return;
+                }
+                
+                // Validate input based on fromBase
+                if (!isValidInput(inputStr, fromBase)) {
+                    alert(`Invalid input for base ${fromBase}`);
+                    return;
+                }
+                
+                // Convert to decimal first
+                const decimalValue = convertToDecimal(inputStr, fromBase);
+                
+                if (isNaN(decimalValue)) {
+                    alert('Invalid number for the selected base');
+                    return;
+                }
+                
+                // Convert to all selected bases
+                toBases.forEach(base => {
+                    const result = convertFromDecimal(decimalValue, base);
+                    document.getElementById(getBaseName(base) + '-value').textContent = result;
+                    document.getElementById(getBaseName(base) + '-result').style.display = 'block';
+                });
+                
+                // Hide results for bases not selected
+                [2, 8, 10, 16].forEach(base => {
+                    if (!toBases.includes(base)) {
+                        document.getElementById(getBaseName(base) + '-result').style.display = 'none';
+                    }
+                });
+                
+                document.getElementById('result-container').style.display = 'block';
+            });
+            
+            function isValidInput(str, base) {
+                // Remove any whitespace
+                str = str.replace(/\s/g, '');
+                
+                // Check for negative numbers
+                if (str.startsWith('-')) {
+                    str = str.substring(1);
+                }
+                
+                // Check for fractional part
+                if (str.includes('.')) {
+                    const parts = str.split('.');
+                    if (parts.length !== 2) return false;
+                    str = parts[0] + parts[1];
+                }
+                
+                const validChars = {
+                    2: /^[01]+$/,
+                    8: /^[0-7]+$/,
+                    10: /^\d+$/,
+                    16: /^[0-9A-Fa-f]+$/
+                };
+                
+                return validChars[base].test(str);
+            }
+            
+            function convertToDecimal(str, fromBase) {
+                if (fromBase === 10) return parseInt(str, 10);
+                
+                // Remove any whitespace and convert to uppercase
+                str = str.replace(/\s/g, '').toUpperCase();
+                
+                // Check for negative numbers
+                let isNegative = false;
+                if (str.startsWith('-')) {
+                    isNegative = true;
+                    str = str.substring(1);
+                }
+                
+                // Convert to decimal
+                let decimalValue = 0;
+                const digits = str.split('');
+                
+                for (let i = 0; i < digits.length; i++) {
+                    const digit = digits[i];
+                    const digitValue = getDigitValue(digit);
+                    const position = digits.length - 1 - i;
+                    decimalValue += digitValue * Math.pow(fromBase, position);
+                }
+                
+                return isNegative ? -decimalValue : decimalValue;
+            }
+            
+            function convertFromDecimal(number, toBase) {
+                if (toBase === 10) return number.toString();
+                
+                // Handle negative numbers
+                let isNegative = false;
+                if (number < 0) {
+                    isNegative = true;
+                    number = Math.abs(number);
+                }
+                
+                // Convert from decimal
+                let result = '';
+                let n = Math.floor(number);
+                
+                if (n === 0) {
+                    result = '0';
+                } else {
+                    while (n > 0) {
+                        const remainder = n % toBase;
+                        result = getDigitChar(remainder) + result;
+                        n = Math.floor(n / toBase);
+                    }
+                }
+                
+                return isNegative ? '-' + result : result;
+            }
+            
+            function getDigitValue(char) {
+                if (char >= '0' && char <= '9') return parseInt(char, 10);
+                if (char >= 'A' && char <= 'F') return char.charCodeAt(0) - 'A'.charCodeAt(0) + 10;
+                return 0;
+            }
+            
+            function getDigitChar(value) {
+                if (value < 10) return value.toString();
+                return String.fromCharCode('A'.charCodeAt(0) + value - 10);
+            }
+            
+            function getBaseName(base) {
+                switch(base) {
+                    case 2: return 'binary';
+                    case 8: return 'octal';
+                    case 10: return 'decimal';
+                    case 16: return 'hexadecimal';
+                    default: return '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

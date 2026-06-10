@@ -1,0 +1,126 @@
+<!DOCTYPE html>   <html lang="en">   <head>       <meta charset="UTF-8">       <link rel="shortcut icon" href="favicon.png" type="image/x-icon">       <meta name="viewport" content="width=device-width, initial-scale=1.0">       <title>Retirement Calculator | CalcMaster</title>       <meta name="description" content="Plan for retirement with our free calculator. Estimate how much you need to save and track your progress toward your retirement goals.">       <link rel="stylesheet" href="css/style.css">       <link rel="stylesheet" href="css/calculator.css">       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   </head>
+<body><nav class="navbar">       <div class="container">        
+       <a href="index.html" class="logo">CalcMaster</a>           <div class="nav-links">               <a href="index.html">Home</a>            
+           <a href="index.html#categories">Categories</a>               <a href="about.html">About</a>               <div class="search-container">                   <input type="text" placeholder="Search calculators..." id="search-input">                   <button id="search-btn"><i class="fas fa-search"></i></button>               </div>           </div>           <div class="hamburger">               <span></span>               <span></span>               <span></span>           </div>       </div>   </nav>   <main class="calculator-container">           <div class="calculator-header">               <h1>Retirement Calculator</h1>               <p>Plan your retirement savings</p>           </div>                      <div class="calculator-content">               <div class="calculator-form">                   <div class="input-group">                       <label for="current-age">Current Age</label>                       <input type="number" id="current-age" placeholder="e.g. 30">                   </div>                                      <div class="input-group">                       <label for="retirement-age">Retirement Age</label>                       <input type="number" id="retirement-age" placeholder="e.g. 65">                   </div>                                      <div class="input-group">                       <label for="current-savings">Current Savings</label>                       <input type="number" id="current-savings" placeholder="e.g. 50000">                   </div>                                      <div class="input-group">                       <label for="monthly-contribution">Monthly Contribution</label>                       <input type="number" id="monthly-contribution" placeholder="e.g. 1000">                   </div>                                      <div class="input-group">                       <label for="expected-return">Expected Return (%)</label>                       <input type="number" id="expected-return" placeholder="e.g. 6" step="0.01">                   </div>                                      <button class="calculate-btn" id="calculate-retirement">Calculate</button>                                      <div class="result-container" id="result-container">                       <div class="result-item">                           <p class="result-label">Retirement Savings:</p>                           <p class="result-value" id="retirement-savings">$0.00</p>                       </div>                       <div class="result-item">                           <p class="result-label">Total Contributions:</p>                           <p class="result-value" id="total-contributions">$0.00</p>                       </div>                       <div class="result-item">                           <p class="result-label">Years to Retirement:</p>                           <p class="result-value" id="years-to-retirement">0</p>                       </div>                   </div>               </div>                                        
+             <div class="units-section"> 
+
+    <h2>About Retirement Planning</h2>  
+    <p>A retirement calculator helps you determine how much you need to save to maintain your desired lifestyle after you stop working. It considers factors like your current savings, contribution rate, expected returns, inflation, and retirement timeline to project whether you're on track for a secure retirement.</p>  
+    
+    <h3>How to Use This Retirement Calculator</h3>                 
+    <ol>                     
+        <li>Enter your current age and planned retirement age</li>            
+        <li>Input your current retirement savings balance</li>    
+        <li>Enter your annual income and current contribution rate</li>
+        <li>Set your expected annual salary increase percentage</li>                   
+        <li>Input your expected annual return on investments</li>                   
+        <li>Set your expected retirement duration (years in retirement)</li>                   
+        <li>Adjust the inflation rate if needed (default is typically 2-3%)</li>
+        <li>Enter your desired retirement income (as percentage of final salary)</li>
+        <li>Click the calculate button</li>
+        <li>Review your retirement readiness, projected savings at retirement, and potential shortfalls or surpluses</li>                 
+    </ol>                         
+
+    <h3>Why We Use a Retirement Calculator</h3>                 
+    <ul>                   
+        <li>Financial security assessment: Determine if you're saving enough for retirement</li>                    
+        <li>Goal setting: Establish clear retirement savings targets</li>                   
+        <li>Scenario planning: Test different retirement ages, savings rates, and investment strategies</li>
+        <li>Lifestyle planning: Understand what retirement income you can expect</li>
+        <li>Course correction: Identify savings gaps early when you still have time to adjust</li>                               
+    </ul>               
+
+    <h3>Key Retirement Planning Terms Explained</h3>  
+    <table>  
+        <tr>  
+            <th>Term</th>  
+            <th>Definition</th>  
+            <th>Why It Matters</th>  
+        </tr>  
+        <tr>  
+            <td>Compound Growth</td>  
+            <td>Earnings generating their own earnings over time</td>  
+            <td>The foundation of retirement wealth building - makes time your greatest ally</td>  
+        </tr>  
+        <tr>  
+            <td>Inflation</td>  
+            <td>The gradual increase in prices over time</td>  
+            <td>Reduces purchasing power - your retirement income needs to keep pace</td>  
+        </tr>  
+        <tr>  
+            <td>Replacement Ratio</td>  
+            <td>Percentage of pre-retirement income needed in retirement</td>  
+            <td>Most people need 70-85% of their final salary to maintain lifestyle</td>  
+        </tr>  
+        <tr>  
+            <td>Safe Withdrawal Rate</td>  
+            <td>Percentage of savings that can be withdrawn annually without depleting funds</td>  
+            <td>Typically 3-4% annually to make retirement savings last 30+ years</td>  
+        </tr>  
+        <tr>  
+            <td>Retirement Income Gap</td>  
+            <td>Difference between projected income and expected expenses</td>  
+            <td>Identifies how much additional savings you need to bridge the shortfall</td>  
+        </tr>  
+    </table>  
+    
+    <h3>How Different Factors Affect Retirement Readiness</h3>  
+    <p>Understanding these relationships can significantly impact your retirement security:</p>
+    <ul>  
+        <li><strong>Starting earlier</strong> dramatically reduces the required savings rate due to compound growth</li>  
+        <li><strong>Small increases in savings rate</strong> can have an enormous impact over decades</li>  
+        <li><strong>Working just a few extra years</strong> allows more savings accumulation and fewer years of drawdown</li>  
+        <li><strong>Higher investment returns</strong> can reduce required savings but increase risk</li>  
+        <li><strong>Inflation</strong> silently erodes purchasing power - must be accounted for in long-term planning</li>  
+    </ul>  
+    
+    <h3>Retirement Income Sources</h3>  
+    <p>A complete retirement plan typically includes multiple income streams:</p>
+    <ul>
+        <li><strong>Social Security/Government Pensions:</strong> Foundation income for most retirees</li>
+        <li><strong>Employer Retirement Plans:</strong> 401(k), 403(b), pension plans</li>
+        <li><strong>Personal Retirement Accounts:</strong> IRAs, Roth IRAs, and other tax-advantaged accounts</li>
+        <li><strong>Personal Investments:</strong> Brokerage accounts, real estate, and other assets</li>
+        <li><strong>Part-time Work:</strong> Many retirees continue some form of paid work</li>
+        <li><strong>Annuities:</strong> Can provide guaranteed income streams in retirement</li>
+    </ul>
+    
+    <h3>The Mathematics Behind Retirement Calculations</h3>  
+    <p>Our calculator uses several financial formulas to project retirement readiness:</p>
+    <p><strong>Future Value of Current Savings = PV × (1 + r)^n</strong></p>
+    <p><strong>Future Value of Contributions = PMT × [((1 + r)^n - 1) / r]</strong></p>
+    <p><strong>Retirement Income Need = Final Salary × Replacement Ratio</strong></p>
+    <p><strong>Required Savings = Annual Income Need / Safe Withdrawal Rate</strong></p>
+    <p>Where:</p>
+    <ul>
+        <li><strong>PV</strong> = Present value of current savings</li>
+        <li><strong>r</strong> = Annual return rate (adjusted for inflation if needed)</li>
+        <li><strong>n</strong> = Years until retirement</li>
+        <li><strong>PMT</strong> = Annual contribution amount (increasing with salary)</li>
+    </ul>
+    
+    <h3>Retirement Planning Strategies & Tips</h3>
+    <ul>
+        <li><strong>Start as early as possible:</strong> Time is your most valuable asset in retirement planning</li>
+        <li><strong>Take full advantage of employer matches:</strong> This is free money that accelerates your savings</li>
+        <li><strong>Increase contributions with raises:</strong> Direct a portion of salary increases to retirement savings</li>
+        <li><strong>Diversify investments:</strong> Balance growth and security as you approach retirement</li>
+        <li><strong>Consider healthcare costs:</strong> These often represent a significant expense in retirement</li>
+        <li><strong>Plan for multiple scenarios:</strong> Test your plan against different market conditions and life events</li>
+        <li><strong>Review annually:</strong> Adjust your plan as your circumstances and goals evolve</li>
+    </ul>
+    
+    <div class="fact-card">  
+        <i class="fas fa-lightbulb"></i>  
+        <p>Someone who starts saving $300 per month at age 25 could accumulate over $1 million by age 65 (assuming 7% annual return). If they wait until age 35 to start, they would need to save about $700 per month to reach the same goal!</p>  
+    </div>  
+</div>
+ </div> 
+      </main> 
+        <footer>       
+                <div class="container">    
+                              <div class="footer-content">                  
+                                 <div class="footer-section">       
+                                                    <h3>CalcMaster</h3>            
+                                                               <p>Your comprehensive calculator solution for all needs.</p>  
+                                                                             </div>                   <div class="footer-section">                       <h3>Quick Links</h3>                       <ul>                           <li><a href="index.html">Home</a></li>                           <li><a href="index.html#categories">Categories</a></li>                           <li><a href="about.html">About</a></li>                       </ul>                   </div>                  <div class="footer-section">                       <h4 class="footer-heading">Calculator Types</h4>                       <ul class="footer-links">                           <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>                           <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>                           <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>                           <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>                           <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>                       </ul>                   </div>                   <div class="footer-section">                       <h4 class="footer-heading">Support & Legal</h4>                       <ul class="footer-links">                           <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>                           <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>                           <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>                           <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>                           <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>                       </ul>                   </div>               </div>               <div class="footer-bottom">                   <p>&copy; 2025 CalcMaster. All rights reserved.</p>               </div>           </div>       </footer>   <script src="js/main.js"></script>       <script src="js/calculators/retirement.js"></script>   </body>   </html> 

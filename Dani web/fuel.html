@@ -1,0 +1,343 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Fuel Cost Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Calculate fuel consumption, cost, and efficiency with our free calculator. Plan trips and understand your vehicle's performance better.">  
+
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head><body><nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div> <div class="hamburger">     <span></span>     <span></span>     <span></span> </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container"> <div class="calculator-header">  
+       <h1>Fuel Cost Calculator</h1>   
+         <p>Calculate trip fuel costs based on distance, efficiency, and fuel price</p> 
+        </div>  <div class="calculator-content">  
+               <div class="calculator-form">        
+                <div class="input-group">        
+                         <label for="trip-distance">Trip Distance</label>        
+                              <input type="number" id="trip-distance" placeholder="Enter distance"> 
+                                          <select id="distance-unit">             
+        <option value="miles">Miles</option>  
+
+                        <option value="kilometers">Kilometers</option>  
+
+                    </select>  
+
+                </div>div class="input-group">  
+
+                    <label for="fuel-efficiency">Fuel Efficiency</label>  
+
+                    <input type="number" id="fuel-efficiency" placeholder="Enter efficiency">  
+
+                    <select id="efficiency-unit">  
+
+                        <option value="mpg">Miles per gallon (mpg)</option>  
+
+                        <option value="lpk">Liters per 100 km (L/100km)</option>  
+
+                    </select>  
+
+                </div>div class="input-group">  
+
+                    <label for="fuel-price">Fuel Price (per unit)</label>  
+
+                    <input type="number" id="fuel-price" placeholder="Enter price" step="0.01">  
+
+                    <select id="price-unit">  
+
+                        <option value="gallon">per gallon</option>  
+
+                        <option value="liter">per liter</option>  
+
+                    </select>  
+
+                </div>button class="calculate-btn" id="calculate-fuel">Calculate</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Fuel Needed:</p>  
+
+                        <p class="result-value" id="fuel-needed">0.00</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Total Cost:</p>  
+
+                        <p class="result-value" id="total-cost">$0.00</p>  
+
+                    </div>  
+
+                </div>  
+
+            </div>  
+
+              
+
+            <div class="units-section">  
+
+                <h2>Fuel Economy and Costs</h2>  
+
+                <p>Fuel efficiency measures how far a vehicle can travel on a specific amount of fuel.</p>  
+
+                  
+
+                
+                <h3>How to Use This Tool</h3>                 <ol>                     <li>Enter the required values in the input fields</li>                     <li>Select any necessary options or units from the dropdown menus</li>                     <li>Click the calculate button</li>                     <li>View your results in the result section</li>                 </ol>                                  <h3>Why We Use This Tool</h3>                 <ul>                     <li>Accuracy: Get precise calculations without manual computation errors</li>                     <li>Efficiency: Save time by quickly performing complex calculations</li>                     <li>Learning: Understand the formulas and concepts behind the calculations</li>                     <li>Decision-making: Use reliable data to make informed choices</li>                 </ul>                 <h3>Key Terms</h3>  
+
+                <ul>  
+
+                    <li><strong>MPG (Miles per Gallon):</strong> Distance traveled per unit of fuel (higher is better)</li>  
+
+                    <li><strong>L/100km (Liters per 100 km):</strong> Fuel used to travel 100 km (lower is better)</li>  
+
+                    <li><strong>Fuel Economy:</strong> Relationship between distance traveled and fuel consumed</li>  
+
+                </ul>  
+
+                  
+
+                <h3>Conversion Between Units</h3>  
+
+                <p>To convert between mpg and L/100km:</p>  
+
+                <p><strong>L/100km = 235.2145 / mpg</strong></p>  
+
+                <p><strong>mpg = 235.2145 / L/100km</strong></p>  
+
+                  
+
+                <h3>Typical Fuel Efficiency</h3>  
+
+                <table>  
+
+                    <tr>  
+
+                        <th>Vehicle Type</th>  
+
+                        <th>MPG</th>  
+
+                        <th>L/100km</th>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Compact Car</td>  
+
+                        <td>30-40</td>  
+
+                        <td>7.8-5.9</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>SUV</td>  
+
+                        <td>20-30</td>  
+
+                        <td>11.8-7.8</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Pickup Truck</td>  
+
+                        <td>15-25</td>  
+
+                        <td>15.7-9.4</td>  
+
+                    </tr>  
+
+                    <tr>  
+
+                        <td>Hybrid Car</td>  
+
+                        <td>45-60</td>  
+
+                        <td>5.2-3.9</td>  
+
+                    </tr>  
+
+                </table>  
+
+                  
+
+                <h3>Calculation Formula</h3>  
+
+                <p><strong>For MPG:</strong></p>  
+
+                <p>Fuel Needed (gallons) = Distance (miles) / MPG</p>  
+
+                <p>Total Cost = Fuel Needed ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Price per Gallon</p>  
+
+                  
+
+                <p><strong>For L/100km:</strong></p>  
+
+                <p>Fuel Needed (liters) = (Distance (km) ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â L/100km) / 100</p>  
+
+                <p>Total Cost = Fuel Needed ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Price per Liter</p>  
+
+                  
+
+                <h3>Fuel Saving Tips</h3>  
+
+                <ul>  
+
+                    <li>Maintain proper tire pressure</li>  
+
+                    <li>Avoid aggressive acceleration and braking</li>  
+
+                    <li>Reduce vehicle weight</li>  
+
+                    <li>Use cruise control on highways</li>  
+
+                    <li>Plan efficient routes</li>  
+
+                </ul>  
+
+            </div>  
+
+        </div>  
+
+    </main>  
+
+<footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+               <div class="footer-section">  
+
+                    <h4 class="footer-heading">Calculator Types</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>  
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>  
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>  
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>  
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h4 class="footer-heading">Support & Legal</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>  
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>  
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>  
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/fuel.js"></script>  
+
+</body>  
+
+</html>
+
+

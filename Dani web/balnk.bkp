@@ -1,0 +1,358 @@
+<section class="app-preview">
+    <div class="container">
+        <div class="app-content">
+            <div class="app-text">
+                <h2>CalcMaster Mobile App</h2>
+                <p>Take your calculations on the go with our mobile app. Available for both iOS and Android devices.</p>
+                <ul class="app-features">
+                    <li><i class="fas fa-check"></i> All calculators in your pocket</li>
+                    <li><i class="fas fa-check"></i> Works offline without internet</li>
+                    <li><i class="fas fa-check"></i> Save your calculation history</li>
+                    <li><i class="fas fa-check"></i> Dark mode for comfortable use</li>
+                </ul>
+                <div class="app-download">
+                    <a href="#" class="download-btn">
+                        <i class="fab fa-apple"></i>
+                        <span>App Store</span>
+                    </a>
+                    <a href="#" class="download-btn">
+                        <i class="fab fa-google-play"></i>
+                        <span>Google Play</span>
+                    </a>
+                </div>
+            </div>
+            <div class="app-image">
+                <img src="https://placehold.co/400x600" alt="CalcMaster Mobile App">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+calculators catagories
+ <section class="categories" id="categories">
+    <div class="container">
+        <div class="section-header">
+            <h2>Calculator Categories</h2>
+            <p>Browse our specialized calculators by category</p>
+        </div>
+        <div class="category-grid">
+            <!-- Health Calculators Card -->
+            <div class="category-card health-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>Health Calculators</h3>
+                </div>
+                <div class="category-content">
+                    <div class="calculator-card">
+                        <div class="card-icon bg-pink">
+                            <i class="fas fa-weight-scale"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>BMI Calculator</h4>
+                            <p>Calculate your body mass index</p>
+                            <a href="bmi.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-pink">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Calorie Calculator</h4>
+                            <p>Determine your daily calorie needs</p>
+                            <a href="calorie.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-pink">
+                            <i class="fas fa-glass-water"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Water Intake</h4>
+                            <p>Calculate recommended water consumption</p>
+                            <a href="water.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="health.html" class="view-all">View All Health Calculators <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Finance Calculators Card -->
+            <div class="category-card finance-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Finance Calculators</h3>
+                </div>
+                <div class="category-content">
+                    <div class="calculator-card">
+                        <div class="card-icon bg-blue">
+                            <i class="fas fa-hand-holding-dollar"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Loan Calculator</h4>
+                            <p>Calculate monthly payments</p>
+                            <a href="loan.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-blue">
+                            <i class="fas fa-house"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Mortgage Calculator</h4>
+                            <p>Estimate home loan payments</p>
+                            <a href="mortgage.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-blue">
+                            <i class="fas fa-money-bill-transfer"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Currency Converter</h4>
+                            <p>Convert between world currencies</p>
+                            <a href="currency.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="finance.html" class="view-all">View All Finance Calculators <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Math Calculators Card -->
+            <div class="category-card math-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <h3>Math Calculators</h3>
+                </div>
+                <div class="category-content">
+                    <div class="calculator-card">
+                        <div class="card-icon bg-purple">
+                            <i class="fas fa-shapes"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Area Calculator</h4>
+                            <p>Calculate areas of shapes</p>
+                            <a href="area.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-purple">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Volume Calculator</h4>
+                            <p>Calculate volumes of 3D shapes</p>
+                            <a href="volume.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-purple">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Percentage Calculator</h4>
+                            <p>Calculate percentages</p>
+                            <a href="percentage.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="math.html" class="view-all">View All Math Calculators <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Everyday Calculators Card -->
+            <div class="category-card everyday-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Everyday Calculators</h3>
+                </div>
+                <div class="category-content">
+                    <div class="calculator-card">
+                        <div class="card-icon bg-teal">
+                            <i class="fas fa-temperature-high"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Temperature Converter</h4>
+                            <p>Convert between units</p>
+                            <a href="temperature.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-teal">
+                            <i class="fas fa-weight-hanging"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Weight Converter</h4>
+                            <p>Convert between weight units</p>
+                            <a href="weight.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="card-icon bg-teal">
+                            <i class="fas fa-calendar-days"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Date Calculator</h4>
+                            <p>Calculate days between dates</p>
+                            <a href="date.html" class="card-link">Calculate </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="everyday.html" class="view-all">View All Everyday Calculators <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+styling
+.category-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.categories {
+    padding: 5rem 0;
+    background-color: #f9fafb;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4361ee, #3a0ca3);
+    color: white;
+}
+
+.category-header h3 {
+    margin: 0 0 0 1rem;
+    font-size: 1.25rem;
+}
+
+.category-icon {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.health-category .category-header {
+    background: linear-gradient(135deg, #ec4899, #be185d);
+}
+
+.finance-category .category-header {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.math-category .category-header {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+.everyday-category .category-header {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+}
+.category-tabs {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.card-content h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: #111827;
+}
+
+.calculator-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    border: 1px solid #e5e7eb;
+}
+.card-content p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #3b82f6;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    margin-left: 0.25rem;
+    transition: transform 0.2s ease;
+    &:hover{
+
+    
+    transform: translateX(3px);
+    }
+}
+
+
+.view-all {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    border-top: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.view-all:hover {
+    background: #f8fafc;
+    color: #2563eb;
+}
+
+.view-all i {
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.view-all:hover i {
+    transform: translateX(3px);
+}
+

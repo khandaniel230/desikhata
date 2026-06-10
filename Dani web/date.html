@@ -1,0 +1,348 @@
+<!DOCTYPE html>   
+
+<html lang="en">   
+
+<head>   
+
+    <meta charset="UTF-8">   
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <title>Date Calculator | CalcMaster</title>   
+
+    <meta name="description" content="Calculate the difference between dates or add/subtract days from a date with our free date calculator. Plan events and track time periods easily.">   
+
+    <link rel="stylesheet" href="css/style.css">   
+
+    <link rel="stylesheet" href="css/calculator.css">   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+
+</head><body><nav class="navbar">   
+
+    <div class="container">   
+
+        <a href="index.html" class="logo">CalcMaster</a>   
+
+        <div class="nav-links">   
+
+            <a href="index.html">Home</a>   
+
+            <a href="index.html#categories">Categories</a>   
+
+            <a href="about.html">About</a>   
+
+            <div class="search-container">   
+
+                <input type="text" placeholder="Search calculators..." id="search-input">   
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>   
+
+            </div>   
+
+        </div>   
+
+        <div class="hamburger">   
+
+            <span></span>   
+
+            <span></span>   
+
+            <span></span>   
+
+        </div>   
+
+    </div>   
+
+</nav>   
+
+<main class="calculator-container">   
+
+        <div class="calculator-header">   
+
+            <h1>Date Calculator</h1>   
+
+            <p>Calculate days between dates or add/subtract days from a date</p>   
+
+        </div>   
+
+           
+
+        <div class="calculator-content">   
+
+            <div class="calculator-form">   
+
+                <div class="input-group">   
+
+                    <label for="calculation-type">Calculation Type</label>   
+
+                    <select id="calculation-type">   
+
+                        <option value="difference">Days Between Dates</option>   
+
+                        <option value="add-days">Add Days to Date</option>   
+
+                        <option value="subtract-days">Subtract Days from Date</option>   
+
+                    </select>   
+
+                </div>   
+
+                   
+
+                <div id="dynamic-inputs">   
+
+                    <div class="input-group" id="start-date-group">   
+
+                        <label for="start-date">Start Date</label>   
+
+                        <input type="date" id="start-date">   
+
+                    </div>   
+
+                       
+
+                    <div class="input-group" id="end-date-group">   
+
+                        <label for="end-date">End Date</label>   
+
+                        <input type="date" id="end-date">   
+
+                    </div>   
+
+                       
+
+                    <div class="input-group" id="days-to-add-group" style="display: none;">   
+
+                        <label for="days-to-add">Days to Add</label>   
+
+                        <input type="number" id="days-to-add" placeholder="Enter days">   
+
+                    </div>   
+
+                       
+
+                    <div class="input-group" id="days-to-subtract-group" style="display: none;">   
+
+                        <label for="days-to-subtract">Days to Subtract</label>   
+
+                        <input type="number" id="days-to-subtract" placeholder="Enter days">   
+
+                    </div>   
+
+                </div>   
+
+                   
+
+                <button class="calculate-btn" id="calculate-date">Calculate</button>   
+
+                   
+
+                <div class="result-container" id="result-container">   
+
+                    <p class="result-label" id="result-label">Result:</p>   
+
+                    <p class="result-value" id="date-result">-</p>   
+
+                </div>   
+
+            </div>   
+
+               
+
+            <div class="units-section">   
+
+                <h2>Date Calculations</h2>   
+
+                <p>Date calculations are essential for planning, scheduling, and time management.</p>   
+
+                   
+
+                
+                <h3>How to Use This Tool</h3>                 <ol>                     <li>Enter the required values in the input fields</li>                     <li>Select any necessary options or units from the dropdown menus</li>                     <li>Click the calculate button</li>                     <li>View your results in the result section</li>                 </ol>                                  <h3>Why We Use This Tool</h3>                 <ul>                     <li>Accuracy: Get precise calculations without manual computation errors</li>                     <li>Efficiency: Save time by quickly performing complex calculations</li>                     <li>Learning: Understand the formulas and concepts behind the calculations</li>                     <li>Decision-making: Use reliable data to make informed choices</li>                 </ul>                 <h3>Key Concepts</h3>   
+
+                <ul>   
+
+                    <li><strong>Calendar Systems:</strong> Gregorian calendar is the most widely used civil calendar</li>   
+
+                    <li><strong>Leap Years:</strong> Years divisible by 4, except for years divisible by 100 unless also divisible by 400</li>   
+
+                    <li><strong>Days in Months:</strong> Vary from 28-31 days (remember: "30 days has September...")</li>   
+
+                </ul>   
+
+                   
+
+                <h3>Calculation Methods</h3>   
+
+                <ul>   
+
+                    <li><strong>Days Between Dates:</strong> Counts all days between two dates, excluding the end date</li>   
+
+                    <li><strong>Add/Subtract Days:</strong> Calculates the resulting date after adding/subtracting days</li>   
+
+                </ul>   
+
+                   
+
+                <h3>Common Use Cases</h3>   
+
+                <table>   
+
+                    <tr>   
+
+                        <th>Scenario</th>   
+
+                        <th>Example</th>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>Project deadlines</td>   
+
+                        <td>Days remaining until due date</td>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>Age calculation</td>   
+
+                        <td>Days since birth</td>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>Event planning</td>   
+
+                        <td>Days until event</td>   
+
+                    </tr>   
+
+                    <tr>   
+
+                        <td>Financial planning</td>   
+
+                        <td>Days until payment is due</td>   
+
+                    </tr>   
+
+                </table>   
+
+                   
+
+                <h3>Interesting Date Facts</h3>   
+
+                <ul>   
+
+                    <li>The Gregorian calendar was introduced in 1582 to correct drift in the Julian calendar</li>   
+
+                    <li>October 1582 had 10 days removed when switching to Gregorian calendar</li>   
+
+                    <li>February is the only month with fewer than 30 days</li>   
+
+                    <li>The concept of a 7-day week dates back to ancient Babylon</li>   
+
+                </ul>   
+
+            </div>   
+
+        </div>   
+
+    </main>   
+
+<footer>   
+
+        <div class="container">   
+
+            <div class="footer-content">   
+
+                <div class="footer-section">   
+
+                    <h3>CalcMaster</h3>   
+
+                    <p>Your comprehensive calculator solution for all needs.</p>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h3>Quick Links</h3>   
+
+                    <ul>   
+
+                        <li><a href="index.html">Home</a></li>   
+
+                        <li><a href="index.html#categories">Categories</a></li>   
+
+                        <li><a href="about.html">About</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+               <div class="footer-section">   
+
+                    <h4 class="footer-heading">Calculator Types</h4>   
+
+                    <ul class="footer-links">   
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>   
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>   
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>   
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>   
+
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> All Calculators</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+                <div class="footer-section">   
+
+                    <h4 class="footer-heading">Support & Legal</h4>   
+
+                    <ul class="footer-links">   
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>   
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>   
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>   
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>   
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>   
+
+                    </ul>   
+
+                </div>   
+
+            </div>   
+
+            <div class="footer-bottom">   
+
+                <p>&copy; 2025 CalcMaster. All rights reserved.</p>   
+
+            </div>   
+
+        </div>   
+
+    </footer>   
+
+<script src="js/main.js"></script>   
+
+    <script src="js/calculators/date.js"></script>   
+
+</body>   
+
+</html>
+
+

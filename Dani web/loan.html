@@ -1,0 +1,344 @@
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+    <meta charset="UTF-8">  
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Loan Calculator | CalcMaster</title>  
+
+    <meta name="description" content="Plan your loan payments with our free loan calculator. Calculate monthly payments, total interest, and see complete amortization schedules.">  
+
+    <link rel="stylesheet" href="css/style.css">  
+
+    <link rel="stylesheet" href="css/calculator.css">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+
+</head>
+<body>
+    <nav class="navbar">  
+
+    <div class="container">  
+
+        <a href="index.html" class="logo">CalcMaster</a>  
+
+        <div class="nav-links">  
+
+            <a href="index.html">Home</a>  
+
+            <a href="index.html#categories">Categories</a>  
+
+            <a href="about.html">About</a>  
+
+            <div class="search-container">  
+
+                <input type="text" placeholder="Search calculators..." id="search-input">  
+
+                <button id="search-btn"><i class="fas fa-search"></i></button>  
+
+            </div>  
+
+        </div>  
+
+        <div class="hamburger">  
+
+            <span></span>  
+
+            <span></span>  
+
+            <span></span>  
+
+        </div>  
+
+    </div>  
+
+</nav>  
+
+<main class="calculator-container">  
+
+        <div class="calculator-header">  
+
+            <h1>Loan Calculator</h1>  
+
+            <p>Calculate monthly payments and total interest for loans</p>  
+
+        </div>  
+
+          
+
+        <div class="calculator-content">  
+
+            <div class="calculator-form">  
+
+                <div class="input-group">  
+
+                    <label for="loan-amount">Loan Amount</label>  
+
+                    <input type="number" id="loan-amount" placeholder="e.g. 25000">  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="interest-rate">Interest Rate (%)</label>  
+
+                    <input type="number" id="interest-rate" placeholder="e.g. 5.5" step="0.01">  
+
+                </div>  
+
+                  
+
+                <div class="input-group">  
+
+                    <label for="loan-term">Loan Term</label>  
+
+                    <input type="number" id="loan-term">  
+
+                    <select id="term-unit">  
+
+                        <option value="years">Years</option>  
+
+                        <option value="months">Months</option>  
+
+                    </select>  
+
+                </div>  
+
+                  
+
+                <button class="calculate-btn" id="calculate-loan">Calculate</button>  
+
+                  
+
+                <div class="result-container" id="result-container">  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Monthly Payment:</p>  
+
+                        <p class="result-value" id="monthly-payment">$0.00</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Total Interest:</p>  
+
+                        <p class="result-value" id="total-interest">$0.00</p>  
+
+                    </div>  
+
+                    <div class="result-item">  
+
+                        <p class="result-label">Total Payment:</p>  
+
+                        <p class="result-value" id="total-payment">$0.00</p>  
+
+                    </div>  
+
+                </div>
+
+                <div class="units-section">  
+    <h2>About Loan Calculations</h2>  
+    <p>A loan calculator helps you understand the financial commitment of borrowing money. It calculates your monthly payments, total interest costs, and shows how different factors like loan amount, interest rate, and term affect your repayment schedule.</p>  
+    
+    <h3>How to Use This Loan Calculator</h3>                 
+    <ol>                     
+        <li>Enter the loan amount you wish to borrow</li>            
+        <li>Input the annual interest rate offered by your lender</li>    
+        <li>Select the loan term (how long you'll take to repay the loan)</li>
+        <li>Choose between months or years for your loan term</li>                   
+        <li>Click the calculate button</li>                   
+        <li>Review your monthly payment, total payment, and total interest</li>
+        <li>Optionally view the amortization schedule to see how each payment is allocated</li>                 
+    </ol>                         
+
+    <h3>Why We Use a Loan Calculator</h3>                 
+    <ul>                   
+        <li>Financial planning: Understand the monthly commitment before taking a loan</li>                    
+        <li>Comparison shopping: Evaluate different loan offers from various lenders</li>                   
+        <li>Budgeting: Determine how a loan payment fits into your monthly budget</li>
+        <li>Interest assessment: See the true cost of borrowing over time</li>
+        <li>Prepayment analysis: Understand how extra payments can reduce your loan term and interest costs</li>                               
+    </ul>               
+
+    <h3>Key Loan Terms Explained</h3>  
+    <table>  
+        <tr>  
+            <th>Term</th>  
+            <th>Definition</th>  
+            <th>Why It Matters</th>  
+        </tr>  
+        <tr>  
+            <td>Principal</td>  
+            <td>The original amount of money borrowed</td>  
+            <td>This is the base amount upon which interest is calculated</td>  
+        </tr>  
+        <tr>  
+            <td>Interest Rate</td>  
+            <td>The percentage charged for borrowing money</td>  
+            <td>Determines how much extra you'll pay beyond the principal amount</td>  
+        </tr>  
+        <tr>  
+            <td>Loan Term</td>  
+            <td>The length of time you have to repay the loan</td>  
+            <td>Affects both your monthly payment amount and total interest paid</td>  
+        </tr>  
+        <tr>  
+            <td>Amortization</td>  
+            <td>The process of paying off a loan through regular payments</td>  
+            <td>Determines how much of each payment goes toward principal vs. interest</td>  
+        </tr>  
+        <tr>  
+            <td>APR (Annual Percentage Rate)</td>  
+            <td>The total cost of borrowing including fees and interest</td>  
+            <td>Provides a more accurate comparison between loan offers than interest rate alone</td>  
+        </tr>  
+    </table>  
+    
+    <h3>How Loan Terms Affect Your Payments</h3>  
+    <p>Understanding these relationships can help you make better borrowing decisions:</p>
+    <ul>  
+        <li><strong>Longer loan terms</strong> mean lower monthly payments but higher total interest costs</li>  
+        <li><strong>Shorter loan terms</strong> mean higher monthly payments but less interest paid overall</li>  
+        <li><strong>Lower interest rates</strong> reduce both monthly payments and total interest</li>  
+        <li><strong>Making extra payments</strong> can significantly reduce your loan term and total interest</li>  
+    </ul>  
+    
+    <h3>Types of Loans</h3>  
+    <p>Different loan types have different characteristics:</p>
+    <ul>
+        <li><strong>Fixed-rate loans:</strong> Interest rate remains constant throughout the loan term</li>
+        <li><strong>Variable-rate loans:</strong> Interest rate can change based on market conditions</li>
+        <li><strong>Secured loans:</strong> Backed by collateral (e.g., mortgage, auto loan)</li>
+        <li><strong>Unsecured loans:</strong> Not backed by collateral (e.g., personal loans, credit cards)</li>
+        <li><strong>Amortizing loans:</strong> Regular payments cover both principal and interest</li>
+        <li><strong>Interest-only loans:</strong> Initial payments cover only interest for a set period</li>
+    </ul>
+    
+    <h3>The Mathematics Behind Loan Calculations</h3>  
+    <p>Our calculator uses the standard amortization formula to determine your monthly payment:</p>
+    <p><strong>Monthly Payment = P × [r(1+r)^n] / [(1+r)^n - 1]</strong></p>  
+    <p>Where:</p>
+    <ul>
+        <li><strong>P</strong> = Principal loan amount</li>
+        <li><strong>r</strong> = Monthly interest rate (annual rate ÷ 12)</li>
+        <li><strong>n</strong> = Total number of payments (loan term in years × 12)</li>
+    </ul>
+    <p>This formula calculates a fixed monthly payment that ensures the loan is paid off completely by the end of the term, with interest included in each payment.</p>
+    
+    <h3>Tips for Responsible Borrowing</h3>
+    <ul>
+        <li>Only borrow what you can afford to repay</li>
+        <li>Compare offers from multiple lenders to find the best rate</li>
+        <li>Consider the total cost of borrowing, not just the monthly payment</li>
+        <li>Read and understand all loan terms and conditions before signing</li>
+        <li>Check your credit score beforehand, as it significantly impacts your interest rate</li>
+    </ul>
+    
+    <div class="fact-card">  
+        <i class="fas fa-lightbulb"></i>  
+        <p>Making just one extra mortgage payment per year can reduce a 30-year loan term by several years and save tens of thousands of dollars in interest!</p>  
+    </div>  
+</div>
+    </main>  
+
+<footer>  
+
+        <div class="container">  
+
+            <div class="footer-content">  
+
+                <div class="footer-section">  
+
+                    <h3>CalcMaster</h3>  
+
+                    <p>Your comprehensive calculator solution for all needs.</p>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h3>Quick Links</h3>  
+
+                    <ul>  
+
+                        <li><a href="index.html">Home</a></li>  
+
+                        <li><a href="index.html#categories">Categories</a></li>  
+
+                        <li><a href="about.html">About</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+               <div class="footer-section">  
+
+                    <h4 class="footer-heading">Calculator Types</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="health.html"><i class="fas fa-chevron-right"></i> Health Calculators</a></li>  
+
+                        <li><a href="finance.html"><i class="fas fa-chevron-right"></i> Financial Calculators</a></li>  
+
+                        <li><a href="math.html"><i class="fas fa-chevron-right"></i> Math Calculators</a></li>  
+
+                        <li><a href="everyday.html"><i class="fas fa-chevron-right"></i> Conversion Tools</a></li>  
+
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> All Calculators</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+                <div class="footer-section">  
+
+                    <h4 class="footer-heading">Support & Legal</h4>  
+
+                    <ul class="footer-links">  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Help Center</a></li>  
+
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>  
+
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>  
+
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>  
+
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Feedback</a></li>  
+
+                    </ul>  
+
+                </div>  
+
+            </div>  
+
+            <div class="footer-bottom">  
+
+                <p>&copy; 2023 CalcMaster. All rights reserved.</p>  
+
+            </div>  
+
+        </div>  
+
+    </footer>  
+
+<script src="js/main.js"></script>  
+
+    <script src="js/calculators/loan.js"></script>  
+
+</body>  
+
+</html>
+
+
